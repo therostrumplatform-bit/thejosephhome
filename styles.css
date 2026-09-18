@@ -1142,3 +1142,104 @@ section.metal:has(.jeff)::before,section.metal:has(.jeff)::after{display:none!im
  .memorial-home .memory{grid-template-columns:1fr!important;gap:28px!important}.memorial-home .memory img{max-width:330px!important}
  .brotherhood-feature{height:300px!important}
 }
+
+
+/* ============================================================
+   ARCHON / JOSEPH'S HOME — APPROVED DESIGN PASS
+   Removes legacy glossy/texture styling and restores the
+   premium editorial-industrial concept requested by client.
+   ============================================================ */
+:root{--jh-ink:#071721;--jh-navy:#0b2432;--jh-teal:#2f8199;--jh-teal-light:#5fb6ce;--jh-cream:#f2efe7;--jh-sand:#d2c5aa}
+html{background:var(--jh-ink)}
+body{background:var(--jh-ink);font-feature-settings:"kern" 1}
+body::before,body::after{display:none!important}
+.metal,.band,.restore,footer.foot{background-image:none!important}
+.metal{background:var(--jh-ink)!important}
+.metal-light,.band--sky,.band--wash{background:var(--jh-cream)!important}
+.texture,.noise{display:none!important}
+.btn{border-radius:0!important;box-shadow:none!important;letter-spacing:.1em!important}
+.btn-primary{background:var(--jh-teal)!important;border-color:var(--jh-teal-light)!important}
+.btn-ghost{background:transparent!important}
+
+/* restrained masthead */
+.golf{background:#17394a!important}.golf .wrap{min-height:34px!important}
+header.site{position:relative!important;top:auto!important;background:#071b27!important;box-shadow:none!important}
+header.site .wrap{min-height:82px!important}
+.brand img{filter:none!important}
+
+/* decisive photographic home hero */
+.home-hero{min-height:690px!important;background-image:linear-gradient(90deg,rgba(4,16,24,.92),rgba(4,16,24,.68) 43%,rgba(4,16,24,.08) 78%),url("josephs-home-exterior.jpg")!important;background-size:cover!important;background-position:center!important}
+.home-hero .hero-grid{grid-template-columns:minmax(0,620px) 1fr!important}
+.home-hero h1{font-size:clamp(4.3rem,7vw,6.8rem)!important;line-height:.84!important;letter-spacing:-.065em!important}
+.home-hero .pill{color:var(--jh-teal-light)!important}
+.home-hero .lede{font-size:1.08rem!important;line-height:1.65!important}
+
+/* mission and pillars */
+#who{background:var(--jh-cream)!important;padding:72px 0!important}
+#who .wrap{max-width:1240px}
+#who h2{font-family:var(--serif)!important;font-weight:400!important;text-transform:none!important;letter-spacing:-.035em!important}
+#who .pillars{margin-top:58px!important}
+#who .pillar{padding:30px 26px!important;background:transparent!important}
+
+/* four-step dark architectural rail */
+#apply{background:#0a202d!important;padding:72px 0!important}
+#apply .step{background:#0d2937!important;border-top:1px solid rgba(95,182,206,.28)!important;border-bottom:1px solid rgba(95,182,206,.28)!important}
+#apply .step h3{color:#fff!important}
+#apply .step a{color:var(--jh-teal-light)!important}
+
+/* split journey */
+.three-year-visual{background:var(--jh-cream)!important}
+.three-year-visual .phase{background:transparent!important}
+.three-year-visual .journey-photo{overflow:hidden!important}
+.three-year-visual .journey-photo img{filter:saturate(.78) contrast(1.03)!important}
+
+/* documentary benefits */
+.metal-light:has(.gets){background:#081c28!important}
+.metal-light:has(.gets) .gets{display:grid!important;grid-template-columns:repeat(6,1fr)!important;gap:0!important}
+.metal-light:has(.gets) .get{border-right:1px solid rgba(95,182,206,.2)!important}
+.brotherhood-feature{border:0!important}
+.brotherhood-feature figcaption{background:#0b2432!important;color:#fff!important;border:0!important;border-radius:0!important}
+
+/* memorial — no fake metallic texture */
+.memorial-home{background:var(--jh-sand)!important;color:#2a2419!important}
+.memorial-home h2,.memorial-home h3,.memorial-home p{color:#2a2419!important}
+.memorial-home .memory-card{background:transparent!important;border:0!important;box-shadow:none!important}
+
+/* Jeff / stories: remove broken white-on-white cards */
+section.metal:has(.jeff),#stories{background:#081c28!important}
+#stories .cards{display:grid!important;grid-template-columns:repeat(3,1fr)!important;gap:1px!important;background:rgba(95,182,206,.22)!important;border:1px solid rgba(95,182,206,.22)!important}
+#stories .card{background:#0c2735!important;border:0!important;border-radius:0!important;box-shadow:none!important;padding:28px!important}
+#stories .card h3,#stories .card h3 a{color:#fff!important}
+#stories .card p{color:#c7d5dd!important}
+#stories .card .kicker{color:var(--jh-teal-light)!important}
+
+/* RESTORE: clean product editorial panel, not faux carbon fiber */
+.restore{background:#102b39!important}
+.restore::before,.restore::after{display:none!important}
+.restore .product-shot,.restore img{box-shadow:none!important}
+
+/* emergency and footer */
+.emergency{background-image:linear-gradient(90deg,rgba(93,8,14,.72),rgba(5,35,55,.7)),url("emergency-bg.jpg")!important}
+.emergency .wrap{background:rgba(5,17,25,.76)!important;border-left:2px solid var(--jh-teal-light)!important;box-shadow:none!important}
+footer.foot{background:#06151e!important}
+footer.foot::before,footer.foot::after{display:none!important}
+footer.foot .social img{border-radius:0!important;box-shadow:none!important}
+
+/* Interior cards inherit the same system */
+.card,.tier-card,.pcard,.kit-card,.needs-card,.inquiry-form{border-radius:0!important;box-shadow:none!important}
+.metal-light .card{background:#fff!important;color:#173042!important}
+.metal .card,.band--ink .card{background:#0c2735!important;color:#d5e1e7!important}
+
+/* Mobile: match concept, not shrunken desktop */
+@media(max-width:900px){
+ header.site .wrap{min-height:72px!important}
+ .home-hero{min-height:0!important;background-image:none!important}
+ .home-hero .hero-grid>div:first-child{padding:310px 24px 48px!important;background-image:linear-gradient(180deg,rgba(4,16,24,.02) 18%,rgba(4,16,24,.98) 57%),url("josephs-home-exterior.jpg")!important;background-size:cover!important;background-position:center 28%!important}
+ .metal-light:has(.gets) .gets{grid-template-columns:1fr 1fr!important}
+ #stories .cards{grid-template-columns:1fr!important}
+}
+@media(max-width:560px){
+ .home-hero .hero-grid>div:first-child{padding-top:285px!important}
+ .home-hero h1{font-size:3.6rem!important}
+ .metal-light:has(.gets) .gets{grid-template-columns:1fr!important}
+}
