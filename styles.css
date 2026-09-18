@@ -924,3 +924,60 @@ article .wrap,.article .wrap{max-width:960px}.cards,.give-tiers,.kit-grid,.produ
 @media(min-width:901px){
   .three-year-visual>.wrap>.cta-row{grid-column:1}
 }
+
+/* ============================================================
+   MOCKUP #2 — FULL SITE TRANSLATION
+   Shared visual system for the six primary interior pages.
+   ============================================================ */
+main>.band:first-child,main>.metal:first-child,main>.metal-light:first-child{
+  position:relative;overflow:hidden;padding-block:clamp(72px,8vw,112px);
+  border-bottom:1px solid rgba(95,182,206,.24)
+}
+main>.band:first-child .wrap,main>.metal:first-child .wrap,main>.metal-light:first-child .wrap{position:relative;z-index:2}
+main>.band:first-child .display,main>.metal:first-child .display,main>.metal-light:first-child .display{
+  max-width:16ch;font-size:clamp(2.7rem,5.6vw,5.1rem);line-height:.94;letter-spacing:-.055em;text-wrap:balance
+}
+main>.band:first-child .lede,main>.metal:first-child .lede,main>.metal-light:first-child .lede{max-width:68ch}
+main>.band--sky:first-child,main>.metal-light:first-child{
+  background:#e8edef!important;background-image:linear-gradient(115deg,rgba(255,255,255,.92),rgba(212,237,248,.58) 58%,rgba(255,255,255,.74))!important
+}
+main>.band--sky:first-child .display,main>.metal-light:first-child .display{color:#0c293b}
+main>.band--sky:first-child .lede,main>.metal-light:first-child .lede{color:#405666}
+main>.metal:first-child,main>.band:first-child:not(.band--sky){
+  background-image:linear-gradient(90deg,rgba(5,20,30,.97),rgba(8,32,44,.88)),url("texture-metal.jpg")!important;
+  background-size:cover!important
+}
+/* Stories */
+.posts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:rgba(95,182,206,.2);border:1px solid rgba(95,182,206,.2);padding:0!important}
+.posts li{list-style:none;margin:0!important;padding:25px!important;background:#0b2230;position:relative}
+.posts li h2{font-size:1.18rem;margin:0 0 8px}.posts li h2 a{color:#fff}.posts li .sum{color:#bdccd5}.posts li .rail{color:var(--teal-l);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+/* FAQ */
+.faq{max-width:980px;margin-inline:auto}.faq>h2{margin:52px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--teal);font-size:1.65rem}
+.faq>h2:first-child{margin-top:0}.faq details{border-bottom:1px solid rgba(95,182,206,.22);background:rgba(7,24,36,.36)}
+.faq summary{padding:20px 48px 20px 20px;font-family:var(--display);font-weight:700;cursor:pointer;position:relative}
+.faq summary::after{content:"+";position:absolute;right:20px;color:var(--teal-l);font-size:1.4rem}.faq details[open] summary::after{content:"–"}
+.faq .a{padding:0 20px 22px;color:#c8d5dd}.todo{display:inline-block;padding:2px 7px;background:rgba(95,182,206,.1);border:1px dashed rgba(95,182,206,.55);color:#b9dce6}
+/* Golf */
+#tournament.golf-photo{min-height:520px;display:flex;align-items:flex-end;background-image:linear-gradient(90deg,rgba(4,17,26,.94),rgba(4,17,26,.5) 55%,rgba(4,17,26,.15)),url("golf-foursome.jpg")!important;background-size:cover!important;background-position:center 45%!important;color:#fff!important}
+#tournament.golf-photo h1,#tournament.golf-photo p{color:#fff!important;text-shadow:0 2px 18px rgba(0,0,0,.45)}
+#gallery .photo-pair{gap:18px}#gallery .photo-pair img{height:clamp(250px,32vw,420px);object-fit:cover}
+/* Hire us */
+body:has(#lawn-care) main>.metal:first-child{background-image:linear-gradient(90deg,rgba(4,17,26,.96),rgba(4,17,26,.68)),url("work-hands.jpg")!important;background-size:cover!important;background-position:center!important}
+.hire-block{overflow:hidden}.hire-media{max-height:410px;overflow:hidden}.hire-media img{width:100%;height:410px;object-fit:cover}.hire-content{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,6vw,80px);align-items:start}
+.inquiry-form{border:1px solid rgba(95,182,206,.3);border-radius:2px!important;box-shadow:0 18px 40px rgba(0,0,0,.12)}
+/* Give */
+#give{background-image:linear-gradient(90deg,rgba(5,20,30,.98),rgba(8,32,44,.82)),url("joey-watts.jpg")!important;background-size:cover!important;background-position:center 30%!important}
+#give>.wrap{max-width:1240px}.give-tiers,.kit-grid{align-items:stretch}.tier-card,.kit-card,.pcard,.needs-card{border-radius:2px!important}
+.memory-card{border-radius:2px!important;overflow:hidden}.memory-card img{border-radius:0!important}.kit-grid{display:grid;grid-template-columns:repeat(2,1fr)}
+/* Common closing CTA */
+.band--ink{background:linear-gradient(115deg,#06141e,#0b2a39)!important;border-top:1px solid rgba(95,182,206,.24);border-bottom:1px solid rgba(95,182,206,.18)}
+.band--ink .h2big{font-size:clamp(2.2rem,4vw,3.8rem);max-width:15ch}
+/* Find Help: emergency is intentionally first. */
+body:has(#find-help)>.emergency:first-of-type{min-height:330px}
+body:has(#find-help) #find-help{padding-block:70px}
+@media(max-width:900px){
+  .posts{grid-template-columns:1fr}.hire-content,.kit-grid{grid-template-columns:1fr}
+  main>.band:first-child .display,main>.metal:first-child .display,main>.metal-light:first-child .display{font-size:clamp(2.5rem,11vw,4rem)}
+  #tournament.golf-photo{min-height:460px;background-position:62% center!important}
+  .hire-media,.hire-media img{height:300px}.faq summary{padding-left:16px}
+}
