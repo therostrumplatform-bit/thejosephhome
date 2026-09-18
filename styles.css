@@ -1009,3 +1009,19 @@ body:not(:has(#find-help)) main>section:first-child::after{
 .stories-hero{background-image:linear-gradient(90deg,rgba(235,242,244,.98),rgba(235,242,244,.84) 55%,rgba(235,242,244,.35)),url("porch-brothers.jpg")!important;background-size:cover!important;background-position:center 42%!important;min-height:480px;display:flex;align-items:flex-end}
 .stories-hero .wrap{padding-bottom:12px}.stories-hero .lede{max-width:58ch}
 @media(max-width:700px){.stories-hero{min-height:430px;background-position:65% center!important;background-image:linear-gradient(0deg,rgba(235,242,244,.98) 15%,rgba(235,242,244,.72) 68%,rgba(235,242,244,.22)),url("porch-brothers.jpg")!important}}
+
+/* ARTICLE SYSTEM — Mockup #2 editorial translation */
+article{max-width:780px;margin-inline:auto;padding:clamp(54px,7vw,92px) 0}
+article>.tag,article>.byline{font-family:var(--body);text-transform:uppercase;letter-spacing:.12em;font-size:.72rem}
+article>h1{font-family:var(--display);font-size:clamp(2.6rem,5vw,4.7rem);line-height:.98;letter-spacing:-.045em;color:#102b3c;text-wrap:balance}
+article>.dek{font-family:var(--serif);font-size:clamp(1.25rem,2vw,1.55rem);line-height:1.5;color:#405666}
+article>h2{margin-top:2.2em;padding-top:.8em;border-top:1px solid rgba(47,129,153,.3);font-size:clamp(1.55rem,2.6vw,2.15rem)}
+article>p,article>ul{font-size:1.04rem;line-height:1.78}
+article>.verse{margin:34px 0;padding:28px 30px;border-left:3px solid var(--teal);background:#eef4f5}
+article>.verse p{font-family:var(--serif);font-style:italic;font-size:1.18rem}
+article>.callout{margin:34px 0;padding:26px 28px;background:#102b3c;color:#e6eef2;border-top:2px solid var(--teal-l)}
+article>.callout p{margin:0;color:inherit}
+article>.more{margin-top:52px;padding:26px 28px;border:1px solid rgba(47,129,153,.25);background:#f4f1e9}
+article>.more>p{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:.75rem}
+article>.more ul{margin-bottom:0}
+@media(max-width:700px){article{padding:46px 0}article>.verse,article>.callout,article>.more{padding:22px 20px}}
