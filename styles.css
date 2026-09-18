@@ -1283,3 +1283,12 @@ footer.foot .social img{border-radius:0!important;box-shadow:none!important}
 .jh-clean .jh-emergency-actions a{min-height:52px;display:grid;place-items:center;padding:10px 12px;background:rgba(7,30,43,.88);border:1px solid rgba(255,255,255,.5);color:#fff;font:800 11px Archivo,sans-serif;text-transform:uppercase;letter-spacing:.035em;text-align:center}
 .jh-clean .jh-emergency-actions .jh-e911{background:#8e1119;border-color:#ef5359}.jh-clean .jh-emergency-actions .jh-e988{background:#075ca0;border-color:#3fa9f5}
 @media(max-width:800px){.jh-clean .jh-emergency{min-height:390px;background-position:36% center;align-items:flex-end}.jh-clean .jh-emergency:after{background:linear-gradient(0deg,rgba(3,8,12,.98) 0%,rgba(3,8,12,.86) 54%,rgba(3,8,12,.08) 100%)}.jh-clean .jh-emergency-inner{width:calc(100% - 28px);padding:145px 0 22px;display:block}.jh-clean .jh-emergency-copy h2{font-size:29px}.jh-clean .jh-emergency-copy p{font-size:11px}.jh-clean .jh-emergency-actions{margin-top:18px;grid-template-columns:1fr 1fr}.jh-clean .jh-emergency-actions a{font-size:9px;min-height:48px}}
+
+/* REFERENCE FIDELITY — hero, labels, rules */
+.jh-visually-hidden{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+.jh-clean .jh-hero-verse{margin:20px 0 0;padding:10px 0 0 14px;border-left:2px solid #5fb6ce;color:#f4efe6;font:italic 15px/1.4 "Source Serif 4",Georgia,serif}
+.jh-clean .jh-hero-verse cite{font-size:11px;margin-left:8px}
+.jh-clean .jh-steps>.jh-wrap>.jh-eyebrow{color:#5fb6ce;margin:0 0 18px}
+.jh-clean .jh-mission>.jh-wrap>div:first-child:after{content:"";display:block;width:46px;height:2px;background:#2f8199;margin-top:20px}
+@media(min-width:801px){.jh-clean .jh-hero{min-height:480px}.jh-clean .jh-hero-copy{max-width:610px}.jh-clean .jh-hero .jh-eyebrow{color:#fff}.jh-clean .jh-hero h1{font-size:62px}.jh-clean .jh-hero .jh-actions{margin-top:20px}.jh-clean .jh-hero-verse{max-width:430px}.jh-clean .jh-mission-grid>div:first-child>p{display:none}.jh-clean .jh-steps{padding:28px 0 30px}.jh-clean .jh-stepgrid article{min-height:100px}}
+@media(max-width:800px){.jh-clean .jh-hero .jh-eyebrow{color:#fff;font-size:9px}.jh-clean .jh-hero-verse{font-size:13px;margin-top:16px}.jh-clean .jh-hero-verse cite{display:block;margin:3px 0 0}.jh-clean .jh-mission-grid>div:first-child>p{display:none}}
