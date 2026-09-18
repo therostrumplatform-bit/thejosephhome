@@ -1035,3 +1035,110 @@ article>.more ul{margin-bottom:0}
 .journey-photo--statement figcaption{position:absolute;z-index:2;left:max(24px,calc((100% - 1180px)/2));bottom:clamp(24px,5vw,58px);max-width:12ch;color:#fff;font-family:var(--display);font-weight:800;font-size:clamp(2rem,4.5vw,4.2rem);line-height:.98;letter-spacing:-.04em;text-shadow:0 3px 24px rgba(0,0,0,.5)}
 @media(max-width:900px){.pillars{grid-template-columns:1fr 1fr}.pillar:nth-child(2){border-right:0}.pillar:nth-child(-n+2){border-bottom:1px solid rgba(95,182,206,.22)}}
 @media(max-width:560px){.pillars{grid-template-columns:1fr}.pillar{border-right:0!important;border-bottom:1px solid rgba(95,182,206,.22)!important}.pillar:last-child{border-bottom:0!important}}
+
+
+/* ============================================================
+   APPROVED MOCKUP #2 — HOME FINAL OVERRIDES
+   2026-09-18: visual source of truth; deliberately overrides
+   legacy brushed-metal home rules without changing client copy.
+   ============================================================ */
+body{background:#071722}
+.golf{background:#0a2635!important;border:0!important}
+.golf::before,.golf::after{display:none!important}
+.golf .wrap{min-height:38px;padding-top:7px!important;padding-bottom:7px!important;display:flex;align-items:center;justify-content:space-between}
+.golf-title{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}
+.golf-meta{font-size:.66rem;opacity:.72}
+.golf .btn{padding:8px 13px;font-size:.64rem}
+
+header.site{background:#081b27!important;border-bottom:1px solid rgba(95,182,206,.2)}
+header.site::before,header.site::after{display:none!important}
+header.site .wrap{min-height:76px}
+.brand img{width:54px;height:54px}
+.main>a:not(.btn){font-size:.72rem;letter-spacing:.055em;text-transform:uppercase}
+
+/* Photo-led hero: copy sits over the real home on desktop. */
+.home-hero{min-height:650px;padding:0!important;display:flex;align-items:center;
+ background-image:linear-gradient(90deg,rgba(4,17,26,.94) 0%,rgba(4,17,26,.78) 42%,rgba(4,17,26,.18) 76%,rgba(4,17,26,.05) 100%),url("josephs-home-exterior.jpg")!important;
+ background-size:cover!important;background-position:center 45%!important}
+.home-hero::before,.home-hero::after{display:none!important}
+.home-hero .hero-grid{width:100%;grid-template-columns:minmax(0,650px) 1fr!important}
+.home-hero .hero-grid>div:first-child{padding:72px 0!important}
+.home-hero h1{font-size:clamp(4rem,7vw,6.5rem)!important;line-height:.82!important;max-width:7.2ch!important}
+.home-hero .lede{color:#d9e4ea!important}
+.home-hero .verse-card{display:none!important}
+
+/* Cream mission / four pillars — editorial rather than metallic. */
+#who{background:#f0eee7!important;background-image:none!important;color:#173042!important}
+#who::before,#who::after{display:none!important}
+#who .two-col{grid-template-columns:1.08fr .92fr!important;gap:56px!important}
+#who h2{font-family:var(--serif)!important;font-size:clamp(2.4rem,4vw,4rem)!important;line-height:1!important;color:#102b3c!important}
+#who p{color:#405666!important}
+#who .scripture{color:#17384b!important}
+#who .pillars{grid-column:1/-1!important;border-color:rgba(47,129,153,.24)!important}
+#who .pillar{border-color:rgba(47,129,153,.2)!important}
+#who .pillar>span{color:#24778f!important}
+#who .pillar h3{color:#102b3c!important}
+#who .pillar p{color:#405666!important}
+
+/* Four numbered architectural cards on the dark rail. */
+#apply{background:#071b27!important;background-image:none!important}
+#apply::before,#apply::after{display:none!important}
+#apply .steps{gap:0!important}
+#apply .step{clip-path:none!important;position:relative;border:0!important;border-left:1px solid rgba(95,182,206,.3)!important;
+ background:#0b2634!important;padding:30px 24px 28px!important;min-height:260px!important}
+#apply .step:last-child{border-right:1px solid rgba(95,182,206,.3)!important}
+#apply .step::before{content:counter(step,decimal-leading-zero);counter-increment:step;display:block;color:var(--teal-l);
+ font:700 .72rem/1 var(--display);letter-spacing:.16em;margin-bottom:30px}
+#apply .steps{counter-reset:step}
+#apply .puzzle{display:none}
+
+/* Three-Year Walk: cream editorial copy + road image, true 44/56 split. */
+.three-year-visual{display:grid!important;grid-template-columns:44% 56%!important;grid-template-rows:1fr!important;background:#f0eee7!important;background-image:none!important;padding:0!important}
+.three-year-visual::before,.three-year-visual::after{display:none!important}
+.three-year-visual>.wrap{grid-column:1!important;grid-row:1!important;display:block!important;width:100%!important;padding:64px 46px 58px max(28px,calc((100vw - 1240px)/2 + 28px))!important}
+.three-year-visual>.wrap>*{padding-left:0!important;padding-right:0!important}
+.three-year-visual .journey-photo{grid-column:2!important;grid-row:1!important;margin:0!important;height:100%!important;min-height:650px!important}
+.three-year-visual .journey-photo img{width:100%!important;height:100%!important;min-height:650px!important;object-fit:cover!important}
+.three-year-visual .journey-photo--statement figcaption{left:42px!important;bottom:48px!important}
+
+/* More than a roof becomes the dark documentary panel from the mockup. */
+.metal-light:has(.gets){background:#091d29!important;background-image:none!important}
+.metal-light:has(.gets)::before,.metal-light:has(.gets)::after{display:none!important}
+.metal-light:has(.gets) .gets{border-top:1px solid rgba(95,182,206,.25);border-bottom:1px solid rgba(95,182,206,.25)}
+.metal-light:has(.gets) .get{padding:26px 18px!important}
+.metal-light:has(.gets) .wide-photo{display:none}
+.brotherhood-feature{margin-top:44px!important;height:390px!important;position:relative!important;overflow:hidden!important}
+.brotherhood-feature img{width:100%!important;height:100%!important;object-fit:cover!important}
+
+/* Jeff and Joey follow the approved alternating documentary/editorial rhythm. */
+section.metal:has(.jeff){background:#081b27!important;background-image:none!important}
+section.metal:has(.jeff)::before,section.metal:has(.jeff)::after{display:none!important}
+.jeff{display:grid!important;grid-template-columns:minmax(280px,.78fr) 1.22fr!important;gap:0!important;background:#081b27!important}
+.jeff>div:first-child{background:#0c2533;padding:0 0 20px}
+.jeff>div:last-child{padding:38px 44px}
+.jeff img{width:100%!important;height:390px!important;object-fit:cover!important}
+.memorial-home{background:#d0c3a8!important;background-image:none!important}
+.memorial-home::before,.memorial-home::after{display:none!important}
+.memorial-home .memory{display:grid!important;grid-template-columns:330px 1fr!important;gap:48px!important;align-items:center!important}
+.memorial-home .memory img{width:100%!important;aspect-ratio:4/5!important;object-fit:cover!important}
+
+/* Emergency image treatment remains exactly once above footer. */
+.emergency{background-image:linear-gradient(90deg,rgba(91,8,14,.78),rgba(6,37,58,.7)),url("emergency-bg.jpg")!important}
+
+/* Mobile composition from approved mockup: photo first, copy below. */
+@media(max-width:900px){
+ .golf .wrap{width:100%!important;padding-inline:14px!important}.golf-meta{display:none}.golf-title{font-size:.62rem}
+ .home-hero{display:block!important;min-height:0!important;background-image:none!important}
+ .home-hero .hero-grid{display:block!important;width:100%!important}
+ .home-hero .hero-grid>div:first-child{padding:270px 22px 42px!important;background-image:linear-gradient(180deg,rgba(4,17,26,.02) 12%,rgba(4,17,26,.98) 54%),url("josephs-home-exterior.jpg")!important;background-size:cover!important;background-position:center 30%!important}
+ .home-hero h1{font-size:clamp(3rem,14vw,4.5rem)!important}
+ #who .two-col{grid-template-columns:1fr!important;gap:28px!important}
+ #apply .steps{grid-template-columns:1fr!important;gap:1px!important}
+ #apply .step{border:1px solid rgba(95,182,206,.25)!important;min-height:0!important}
+ .three-year-visual{display:block!important}.three-year-visual>.wrap{padding:48px 22px 38px!important}
+ .three-year-visual .journey-photo{height:350px!important;min-height:350px!important}.three-year-visual .journey-photo img{height:350px!important;min-height:350px!important}
+ .three-year-visual .journey-photo--statement figcaption{left:24px!important;bottom:28px!important}
+ .jeff{grid-template-columns:1fr!important}.jeff>div:last-child{padding:30px 22px}.jeff img{height:360px!important}
+ .memorial-home .memory{grid-template-columns:1fr!important;gap:28px!important}.memorial-home .memory img{max-width:330px!important}
+ .brotherhood-feature{height:300px!important}
+}
