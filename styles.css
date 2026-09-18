@@ -913,3 +913,14 @@ article .wrap,.article .wrap{max-width:960px}.cards,.give-tiers,.kit-grid,.produ
 @media(max-width:600px){
   .wrap{width:min(100% - 28px,1240px)}header.site .wrap{min-height:70px}.brand img{width:48px;height:48px}.brand-name{font-size:1rem}.brand-place{font-size:.58rem}.home-hero .hero-grid>div:first-child{padding-top:230px}.stats .wrap{display:grid;grid-template-columns:1fr}.stat{padding:14px 0;border-right:0;border-bottom:1px solid rgba(95,182,206,.15)}.golf-title{font-size:.72rem}.golf .btn{font-size:.6rem}.section-head{font-size:2rem}.emergency .wrap{padding:24px 20px}.emergency h2{font-size:2.2rem}
 }
+
+/* Mockup #2 — locked home refinements */
+.three-year-visual .timeline{display:grid;gap:0;margin:26px 0 30px}
+.three-year-visual .phase{padding:16px 0;border-top:1px solid rgba(16,43,58,.18)}
+.three-year-visual .phase:last-child{border-bottom:1px solid rgba(16,43,58,.18)}
+.three-year-visual .phase .when{color:#176f88;font:700 .72rem/1.2 var(--display);letter-spacing:.13em}
+.three-year-visual .phase h3{margin:.35rem 0 .3rem;font-size:1rem;line-height:1.25}
+.three-year-visual .phase p{margin:0;font-size:.9rem;line-height:1.5}
+@media(min-width:901px){
+  .three-year-visual>.wrap>.cta-row{grid-column:1}
+}
