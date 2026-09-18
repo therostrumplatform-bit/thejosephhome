@@ -1005,3 +1005,7 @@ body:not(:has(#find-help)) main>section:first-child::after{
 .emergency .wrap{position:relative;z-index:1}
 .foot{border-top:1px solid rgba(95,182,206,.22)}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+.stories-hero{background-image:linear-gradient(90deg,rgba(235,242,244,.98),rgba(235,242,244,.84) 55%,rgba(235,242,244,.35)),url("porch-brothers.jpg")!important;background-size:cover!important;background-position:center 42%!important;min-height:480px;display:flex;align-items:flex-end}
+.stories-hero .wrap{padding-bottom:12px}.stories-hero .lede{max-width:58ch}
+@media(max-width:700px){.stories-hero{min-height:430px;background-position:65% center!important;background-image:linear-gradient(0deg,rgba(235,242,244,.98) 15%,rgba(235,242,244,.72) 68%,rgba(235,242,244,.22)),url("porch-brothers.jpg")!important}}
