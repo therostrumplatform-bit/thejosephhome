@@ -74,53 +74,6 @@
   </div>
 </div>
 
-<!-- STATS -->
-<div class="stats metal">
-  <div class="wrap">
-    <div class="stat"><div class="num">12 <span>months</span></div><p>Living in the home, working, in church, being discipled</p></div>
-    <div class="stat"><div class="num">+ 2 <span>years</span></div><p>Self-directed mentorship after you move out</p></div>
-    <div class="stat"><div class="num">Men <span>18+</span></div><p>Who have completed a rehab program</p></div>
-  </div>
-</div>
-
-
-<!-- GOLF TOURNAMENT -->
-<section class="metal-light golf-photo" id="golf">
-  <div class="wrap">
-    <p class="eyebrow">Save the date &middot; Our biggest fundraiser of the year</p>
-    <h2 class="section-head">11th Annual Joseph&rsquo;s Home Golf Tournament</h2>
-    <div class="rule"></div>
-    <div class="two-col">
-      <div>
-        <p class="lede">Saturday, November 7, 2026 at Grand Bear Golf Course in Saucier. One day on the
-          course pays for months of beds, meals, and discipleship. It is the single most useful thing most
-          people can do for this house all year.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://charitygolftoday.com/josephshomegolftournament" target="_blank" rel="noopener">Register a team</a>
-          <a class="btn btn-ghost" href="golf.html">Tournament details</a>
-        </div>
-      </div>
-      <ul class="needs" style="--x:0">
-        <li><b>Register a foursome</b> &mdash; the simplest way in</li>
-        <li><b>Sponsor a hole</b> &mdash; your name on the course all day</li>
-        <li><b>Donate a raffle item</b> or a prize for the auction</li>
-        <li><b>Volunteer on the day</b> &mdash; registration, spotting, cleanup</li>
-        <li><b>Bring your company</b> &mdash; team building that pays for a bed</li>
-      </ul>
-    </div>
-    <div class="photo-pair">
-      <figure>
-        <img src="golf-foursome.jpg" alt="A foursome on the course at the Joseph's Home tournament" loading="lazy">
-        <figcaption>Teams register as a foursome. Companies, churches and families all field one.</figcaption>
-      </figure>
-      <figure>
-        <img src="golf-green.jpg" alt="Players on the green at Grand Bear" loading="lazy">
-        <figcaption>Grand Bear, Saucier. A full field and a shotgun start.</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
 <!-- WHY WE EXIST -->
 <section class="metal" id="who">
   <div class="wrap two-col">
@@ -430,69 +383,6 @@
 })();
 </script>
 
-<!-- ============ GOLF ANNOUNCEMENT MODAL ============ -->
-<div class="gmodal" id="golfModal" role="dialog" aria-modal="true"
-     aria-labelledby="gmodal-h" aria-describedby="gmodal-d" hidden>
-  <div class="gmodal-back" data-gclose></div>
-  <div class="gmodal-card">
-    <button class="gmodal-x" type="button" data-gclose aria-label="Close announcement">&times;</button>
-    <img class="gmodal-img" src="golf-foursome.jpg" alt="" aria-hidden="true">
-    <div class="gmodal-body">
-      <p class="gmodal-eyebrow">Our biggest fundraiser of the year</p>
-      <h2 id="gmodal-h">11th Annual Joseph&rsquo;s Home Golf Tournament</h2>
-      <p id="gmodal-d" class="gmodal-meta">Saturday, November 7, 2026 &middot; 8:00 a.m. shotgun start<br>
-        Grand Bear Golf Course &middot; Saucier, Mississippi</p>
-      <div class="gmodal-actions">
-        <a class="btn btn-primary" href="https://charitygolftoday.com/josephshomegolftournament" target="_blank" rel="noopener">Register a team</a>
-        <a class="btn btn-ghost" href="golf.html">Tournament details</a>
-      </div>
-      <button class="gmodal-dismiss" type="button" data-gclose>No thanks, take me to the site</button>
-    </div>
-  </div>
-</div>
-<script>
-(function(){
-  var m = document.getElementById('golfModal');
-  if (!m) return;
-  var KEY = 'jh-golf-2026';
-  var seen = false;
-  try { seen = sessionStorage.getItem(KEY) === '1'; } catch (e) { seen = false; }
-  if (seen) return;
-
-  var opener = null;
-  function close(){
-    m.hidden = true;
-    document.documentElement.style.overflow = '';
-    try { sessionStorage.setItem(KEY, '1'); } catch (e) {}
-    if (opener && opener.focus) opener.focus();
-  }
-  function open(){
-    opener = document.activeElement;
-    m.hidden = false;
-    document.documentElement.style.overflow = 'hidden';
-    var f = m.querySelector('.gmodal-x');
-    if (f) f.focus();
-  }
-
-  m.addEventListener('click', function(e){
-    if (e.target.hasAttribute('data-gclose')) close();
-  });
-  document.addEventListener('keydown', function(e){
-    if (e.key === 'Escape' && !m.hidden) close();
-  });
-  // keep tab focus inside the dialog while it is open
-  m.addEventListener('keydown', function(e){
-    if (e.key !== 'Tab' || m.hidden) return;
-    var f = m.querySelectorAll('a[href], button');
-    if (!f.length) return;
-    var first = f[0], last = f[f.length - 1];
-    if (e.shiftKey && document.activeElement === first){ e.preventDefault(); last.focus(); }
-    else if (!e.shiftKey && document.activeElement === last){ e.preventDefault(); first.focus(); }
-  });
-
-  setTimeout(open, 1200);
-})();
-</script>
 <script src="jh-chatbot.js" defer></script>
 </body>
 </html>
