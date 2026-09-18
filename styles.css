@@ -1271,3 +1271,15 @@ footer.foot .social img{border-radius:0!important;box-shadow:none!important}
 /* STORIES + FINAL REFERENCE DENSITY */
 .jh-stories{background:#071b28}.jh-stories>.jh-wrap{width:100%;max-width:none;display:grid;grid-template-columns:48% 52%;align-items:stretch}.jh-stories-copy{padding:38px max(30px,calc((100vw - 1320px)/2));align-self:center}.jh-stories h2{font:500 38px/1.02 "Source Serif 4",Georgia,serif;margin:0 0 14px}.jh-stories p{color:#c2d0d6;font-size:13px;line-height:1.55;max-width:470px;margin:0 0 22px}.jh-stories img{width:100%;height:255px;object-fit:cover;object-position:center 55%}
 @media(max-width:800px){.jh-stories>.jh-wrap{grid-template-columns:1fr}.jh-stories-copy{padding:30px 24px}.jh-stories h2{font-size:30px}.jh-stories img{height:210px}.jh-clean .jh-golf .jh-wrap{gap:8px}.jh-clean .jh-golf a{white-space:nowrap}.jh-clean .jh-actions>a{flex:1;text-align:center}.jh-clean .jh-hero .jh-actions{display:grid;grid-template-columns:1fr}.jh-clean .jh-emergency-actions a{padding:14px 8px;font-size:10px}}
+
+/* ACCESSIBLE EMERGENCY STRIP — clean background-ready composition */
+.jh-clean .jh-emergency{position:relative;min-height:245px;padding:0;background:#090d13 url("emergency-bg.jpg") center/cover no-repeat;display:flex;align-items:center;overflow:hidden}
+.jh-clean .jh-emergency:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,8,13,.12) 0%,rgba(4,8,13,.52) 38%,rgba(4,8,13,.82) 100%);pointer-events:none}
+.jh-clean .jh-emergency-inner{position:relative;z-index:1;width:min(1320px,calc(100% - 42px));margin:auto;padding-left:min(32%,410px);display:grid;grid-template-columns:1.1fr 1fr;gap:30px;align-items:center}
+.jh-clean .jh-emergency-copy h2{font:800 36px/.98 Archivo,sans-serif;text-transform:uppercase;letter-spacing:-.03em;margin:0 0 10px;color:#fff}
+.jh-clean .jh-emergency-copy p{margin:0;color:#eef4f6;font-size:12px;line-height:1.55;max-width:560px}
+.jh-clean .jh-emergency .jh-eyebrow{color:#fff;margin-bottom:9px}
+.jh-clean .jh-emergency-actions{width:auto;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.jh-clean .jh-emergency-actions a{min-height:52px;display:grid;place-items:center;padding:10px 12px;background:rgba(7,30,43,.88);border:1px solid rgba(255,255,255,.5);color:#fff;font:800 11px Archivo,sans-serif;text-transform:uppercase;letter-spacing:.035em;text-align:center}
+.jh-clean .jh-emergency-actions .jh-e911{background:#8e1119;border-color:#ef5359}.jh-clean .jh-emergency-actions .jh-e988{background:#075ca0;border-color:#3fa9f5}
+@media(max-width:800px){.jh-clean .jh-emergency{min-height:390px;background-position:36% center;align-items:flex-end}.jh-clean .jh-emergency:after{background:linear-gradient(0deg,rgba(3,8,12,.98) 0%,rgba(3,8,12,.86) 54%,rgba(3,8,12,.08) 100%)}.jh-clean .jh-emergency-inner{width:calc(100% - 28px);padding:145px 0 22px;display:block}.jh-clean .jh-emergency-copy h2{font-size:29px}.jh-clean .jh-emergency-copy p{font-size:11px}.jh-clean .jh-emergency-actions{margin-top:18px;grid-template-columns:1fr 1fr}.jh-clean .jh-emergency-actions a{font-size:9px;min-height:48px}}
