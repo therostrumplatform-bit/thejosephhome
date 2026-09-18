@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.thejosephhome.org/sitemap.xml
+Sitemap: https://theJosephHome.org/sitemap.xml
