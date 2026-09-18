@@ -913,3 +913,125 @@ article .wrap,.article .wrap{max-width:960px}.cards,.give-tiers,.kit-grid,.produ
 @media(max-width:600px){
   .wrap{width:min(100% - 28px,1240px)}header.site .wrap{min-height:70px}.brand img{width:48px;height:48px}.brand-name{font-size:1rem}.brand-place{font-size:.58rem}.home-hero .hero-grid>div:first-child{padding-top:230px}.stats .wrap{display:grid;grid-template-columns:1fr}.stat{padding:14px 0;border-right:0;border-bottom:1px solid rgba(95,182,206,.15)}.golf-title{font-size:.72rem}.golf .btn{font-size:.6rem}.section-head{font-size:2rem}.emergency .wrap{padding:24px 20px}.emergency h2{font-size:2.2rem}
 }
+
+/* Mockup #2 — locked home refinements */
+.three-year-visual .timeline{display:grid;gap:0;margin:26px 0 30px}
+.three-year-visual .phase{padding:16px 0;border-top:1px solid rgba(16,43,58,.18)}
+.three-year-visual .phase:last-child{border-bottom:1px solid rgba(16,43,58,.18)}
+.three-year-visual .phase .when{color:#176f88;font:700 .72rem/1.2 var(--display);letter-spacing:.13em}
+.three-year-visual .phase h3{margin:.35rem 0 .3rem;font-size:1rem;line-height:1.25}
+.three-year-visual .phase p{margin:0;font-size:.9rem;line-height:1.5}
+@media(min-width:901px){
+  .three-year-visual>.wrap>.cta-row{grid-column:1}
+}
+
+/* ============================================================
+   MOCKUP #2 — FULL SITE TRANSLATION
+   Shared visual system for the six primary interior pages.
+   ============================================================ */
+main>.band:first-child,main>.metal:first-child,main>.metal-light:first-child{
+  position:relative;overflow:hidden;padding-block:clamp(72px,8vw,112px);
+  border-bottom:1px solid rgba(95,182,206,.24)
+}
+main>.band:first-child .wrap,main>.metal:first-child .wrap,main>.metal-light:first-child .wrap{position:relative;z-index:2}
+main>.band:first-child .display,main>.metal:first-child .display,main>.metal-light:first-child .display{
+  max-width:16ch;font-size:clamp(2.7rem,5.6vw,5.1rem);line-height:.94;letter-spacing:-.055em;text-wrap:balance
+}
+main>.band:first-child .lede,main>.metal:first-child .lede,main>.metal-light:first-child .lede{max-width:68ch}
+main>.band--sky:first-child,main>.metal-light:first-child{
+  background:#e8edef!important;background-image:linear-gradient(115deg,rgba(255,255,255,.92),rgba(212,237,248,.58) 58%,rgba(255,255,255,.74))!important
+}
+main>.band--sky:first-child .display,main>.metal-light:first-child .display{color:#0c293b}
+main>.band--sky:first-child .lede,main>.metal-light:first-child .lede{color:#405666}
+main>.metal:first-child,main>.band:first-child:not(.band--sky){
+  background-image:linear-gradient(90deg,rgba(5,20,30,.97),rgba(8,32,44,.88)),url("texture-metal.jpg")!important;
+  background-size:cover!important
+}
+/* Stories */
+.posts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:rgba(95,182,206,.2);border:1px solid rgba(95,182,206,.2);padding:0!important}
+.posts li{list-style:none;margin:0!important;padding:25px!important;background:#0b2230;position:relative}
+.posts li h2{font-size:1.18rem;margin:0 0 8px}.posts li h2 a{color:#fff}.posts li .sum{color:#bdccd5}.posts li .rail{color:var(--teal-l);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase}
+/* FAQ */
+.faq{max-width:980px;margin-inline:auto}.faq>h2{margin:52px 0 14px;padding-bottom:12px;border-bottom:2px solid var(--teal);font-size:1.65rem}
+.faq>h2:first-child{margin-top:0}.faq details{border-bottom:1px solid rgba(95,182,206,.22);background:rgba(7,24,36,.36)}
+.faq summary{padding:20px 48px 20px 20px;font-family:var(--display);font-weight:700;cursor:pointer;position:relative}
+.faq summary::after{content:"+";position:absolute;right:20px;color:var(--teal-l);font-size:1.4rem}.faq details[open] summary::after{content:"–"}
+.faq .a{padding:0 20px 22px;color:#c8d5dd}.todo{display:inline-block;padding:2px 7px;background:rgba(95,182,206,.1);border:1px dashed rgba(95,182,206,.55);color:#b9dce6}
+/* Golf */
+#tournament.golf-photo{min-height:520px;display:flex;align-items:flex-end;background-image:linear-gradient(90deg,rgba(4,17,26,.94),rgba(4,17,26,.5) 55%,rgba(4,17,26,.15)),url("golf-foursome.jpg")!important;background-size:cover!important;background-position:center 45%!important;color:#fff!important}
+#tournament.golf-photo h1,#tournament.golf-photo p{color:#fff!important;text-shadow:0 2px 18px rgba(0,0,0,.45)}
+#gallery .photo-pair{gap:18px}#gallery .photo-pair img{height:clamp(250px,32vw,420px);object-fit:cover}
+/* Hire us */
+body:has(#lawn-care) main>.metal:first-child{background-image:linear-gradient(90deg,rgba(4,17,26,.96),rgba(4,17,26,.68)),url("work-hands.jpg")!important;background-size:cover!important;background-position:center!important}
+.hire-block{overflow:hidden}.hire-media{max-height:410px;overflow:hidden}.hire-media img{width:100%;height:410px;object-fit:cover}.hire-content{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(30px,6vw,80px);align-items:start}
+.inquiry-form{border:1px solid rgba(95,182,206,.3);border-radius:2px!important;box-shadow:0 18px 40px rgba(0,0,0,.12)}
+/* Give */
+#give{background-image:linear-gradient(90deg,rgba(5,20,30,.98),rgba(8,32,44,.82)),url("joey-watts.jpg")!important;background-size:cover!important;background-position:center 30%!important}
+#give>.wrap{max-width:1240px}.give-tiers,.kit-grid{align-items:stretch}.tier-card,.kit-card,.pcard,.needs-card{border-radius:2px!important}
+.memory-card{border-radius:2px!important;overflow:hidden}.memory-card img{border-radius:0!important}.kit-grid{display:grid;grid-template-columns:repeat(2,1fr)}
+/* Common closing CTA */
+.band--ink{background:linear-gradient(115deg,#06141e,#0b2a39)!important;border-top:1px solid rgba(95,182,206,.24);border-bottom:1px solid rgba(95,182,206,.18)}
+.band--ink .h2big{font-size:clamp(2.2rem,4vw,3.8rem);max-width:15ch}
+/* Find Help: emergency is intentionally first. */
+body:has(#find-help)>.emergency:first-of-type{min-height:330px}
+body:has(#find-help) #find-help{padding-block:70px}
+@media(max-width:900px){
+  .posts{grid-template-columns:1fr}.hire-content,.kit-grid{grid-template-columns:1fr}
+  main>.band:first-child .display,main>.metal:first-child .display,main>.metal-light:first-child .display{font-size:clamp(2.5rem,11vw,4rem)}
+  #tournament.golf-photo{min-height:460px;background-position:62% center!important}
+  .hire-media,.hire-media img{height:300px}.faq summary{padding-left:16px}
+}
+
+/* Mockup #2 — interior page polish */
+:where(.band,.metal,.metal-light)> .wrap{position:relative}
+:where(.band,.metal,.metal-light) h2{letter-spacing:-.025em}
+:where(.band,.metal,.metal-light) .eyebrow{letter-spacing:.16em}
+body:not(:has(#find-help)) main>section:first-child::after{
+ content:"";position:absolute;inset:auto 0 0;height:1px;background:linear-gradient(90deg,transparent,rgba(95,182,206,.65),transparent)
+}
+.posts li{transition:transform .2s ease,background .2s ease}.posts li:hover{transform:translateY(-2px);background:#0d2938}
+.posts li h2 a{text-decoration:none}.posts li h2 a:focus-visible{outline:2px solid var(--teal-l);outline-offset:4px}
+#treatment .needs,#celebrate-recovery .needs{margin-top:28px}
+#treatment .callout{border-left:3px solid var(--teal);background:rgba(47,129,153,.08)}
+.golf-photo .wrap{padding-bottom:20px}
+#details .two-col{align-items:start}
+.hire-copy h3{font-size:clamp(1.7rem,3vw,2.45rem)}
+.hire-copy .kicker{color:var(--teal-l);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.75rem}
+.inquiry-form input,.inquiry-form textarea,.inquiry-form select{border-radius:0!important}
+.faq details:first-of-type{border-top:1px solid rgba(95,182,206,.22)}
+#shop .pcard{box-shadow:0 18px 45px rgba(15,36,48,.13)}
+#kits .kit-card{border:1px solid rgba(95,182,206,.28);background:rgba(8,28,40,.58)}
+.emergency{background-image:linear-gradient(90deg,rgba(85,8,13,.88),rgba(9,39,61,.78)),url("emergency-bg.jpg")!important;background-size:cover!important;background-position:center!important}
+.emergency .wrap{position:relative;z-index:1}
+.foot{border-top:1px solid rgba(95,182,206,.22)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+.stories-hero{background-image:linear-gradient(90deg,rgba(235,242,244,.98),rgba(235,242,244,.84) 55%,rgba(235,242,244,.35)),url("porch-brothers.jpg")!important;background-size:cover!important;background-position:center 42%!important;min-height:480px;display:flex;align-items:flex-end}
+.stories-hero .wrap{padding-bottom:12px}.stories-hero .lede{max-width:58ch}
+@media(max-width:700px){.stories-hero{min-height:430px;background-position:65% center!important;background-image:linear-gradient(0deg,rgba(235,242,244,.98) 15%,rgba(235,242,244,.72) 68%,rgba(235,242,244,.22)),url("porch-brothers.jpg")!important}}
+
+/* ARTICLE SYSTEM — Mockup #2 editorial translation */
+article{max-width:780px;margin-inline:auto;padding:clamp(54px,7vw,92px) 0}
+article>.tag,article>.byline{font-family:var(--body);text-transform:uppercase;letter-spacing:.12em;font-size:.72rem}
+article>h1{font-family:var(--display);font-size:clamp(2.6rem,5vw,4.7rem);line-height:.98;letter-spacing:-.045em;color:#102b3c;text-wrap:balance}
+article>.dek{font-family:var(--serif);font-size:clamp(1.25rem,2vw,1.55rem);line-height:1.5;color:#405666}
+article>h2{margin-top:2.2em;padding-top:.8em;border-top:1px solid rgba(47,129,153,.3);font-size:clamp(1.55rem,2.6vw,2.15rem)}
+article>p,article>ul{font-size:1.04rem;line-height:1.78}
+article>.verse{margin:34px 0;padding:28px 30px;border-left:3px solid var(--teal);background:#eef4f5}
+article>.verse p{font-family:var(--serif);font-style:italic;font-size:1.18rem}
+article>.callout{margin:34px 0;padding:26px 28px;background:#102b3c;color:#e6eef2;border-top:2px solid var(--teal-l)}
+article>.callout p{margin:0;color:inherit}
+article>.more{margin-top:52px;padding:26px 28px;border:1px solid rgba(47,129,153,.25);background:#f4f1e9}
+article>.more>p{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:.75rem}
+article>.more ul{margin-bottom:0}
+@media(max-width:700px){article{padding:46px 0}article>.verse,article>.callout,article>.more{padding:22px 20px}}
+
+/* HOME — core pillars + journey statement */
+.pillars{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(30px,5vw,56px);border-top:1px solid rgba(95,182,206,.32);border-bottom:1px solid rgba(95,182,206,.22)}
+.pillar{padding:26px 24px;border-right:1px solid rgba(95,182,206,.22)}.pillar:last-child{border-right:0}
+.pillar>span{display:block;color:var(--teal-l);font:700 .7rem/1 var(--body);letter-spacing:.16em;margin-bottom:18px}
+.pillar h3{font-size:1.05rem;margin:0 0 9px}.pillar p{font-size:.9rem;line-height:1.55;margin:0;color:#bdccd5}
+.journey-photo--statement{position:relative}.journey-photo--statement::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,17,26,.62),rgba(4,17,26,.06))}
+.journey-photo--statement figcaption{position:absolute;z-index:2;left:max(24px,calc((100% - 1180px)/2));bottom:clamp(24px,5vw,58px);max-width:12ch;color:#fff;font-family:var(--display);font-weight:800;font-size:clamp(2rem,4.5vw,4.2rem);line-height:.98;letter-spacing:-.04em;text-shadow:0 3px 24px rgba(0,0,0,.5)}
+@media(max-width:900px){.pillars{grid-template-columns:1fr 1fr}.pillar:nth-child(2){border-right:0}.pillar:nth-child(-n+2){border-bottom:1px solid rgba(95,182,206,.22)}}
+@media(max-width:560px){.pillars{grid-template-columns:1fr}.pillar{border-right:0!important;border-bottom:1px solid rgba(95,182,206,.22)!important}.pillar:last-child{border-bottom:0!important}}
