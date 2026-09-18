@@ -1025,3 +1025,13 @@ article>.more{margin-top:52px;padding:26px 28px;border:1px solid rgba(47,129,153
 article>.more>p{font-family:var(--display);font-weight:800;text-transform:uppercase;letter-spacing:.1em;font-size:.75rem}
 article>.more ul{margin-bottom:0}
 @media(max-width:700px){article{padding:46px 0}article>.verse,article>.callout,article>.more{padding:22px 20px}}
+
+/* HOME — core pillars + journey statement */
+.pillars{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,1fr);margin-top:clamp(30px,5vw,56px);border-top:1px solid rgba(95,182,206,.32);border-bottom:1px solid rgba(95,182,206,.22)}
+.pillar{padding:26px 24px;border-right:1px solid rgba(95,182,206,.22)}.pillar:last-child{border-right:0}
+.pillar>span{display:block;color:var(--teal-l);font:700 .7rem/1 var(--body);letter-spacing:.16em;margin-bottom:18px}
+.pillar h3{font-size:1.05rem;margin:0 0 9px}.pillar p{font-size:.9rem;line-height:1.55;margin:0;color:#bdccd5}
+.journey-photo--statement{position:relative}.journey-photo--statement::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,17,26,.62),rgba(4,17,26,.06))}
+.journey-photo--statement figcaption{position:absolute;z-index:2;left:max(24px,calc((100% - 1180px)/2));bottom:clamp(24px,5vw,58px);max-width:12ch;color:#fff;font-family:var(--display);font-weight:800;font-size:clamp(2rem,4.5vw,4.2rem);line-height:.98;letter-spacing:-.04em;text-shadow:0 3px 24px rgba(0,0,0,.5)}
+@media(max-width:900px){.pillars{grid-template-columns:1fr 1fr}.pillar:nth-child(2){border-right:0}.pillar:nth-child(-n+2){border-bottom:1px solid rgba(95,182,206,.22)}}
+@media(max-width:560px){.pillars{grid-template-columns:1fr}.pillar{border-right:0!important;border-bottom:1px solid rgba(95,182,206,.22)!important}.pillar:last-child{border-bottom:0!important}}
