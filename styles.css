@@ -1268,6 +1268,35 @@ footer.foot .social img{border-radius:0!important;box-shadow:none!important}
 @media(max-width:800px){
 .jh-clean .jh-hero{min-height:430px;padding-bottom:28px;background-position:62% center}.jh-clean .jh-hero h1{font-family:Archivo,sans-serif;font-size:38px;line-height:.98;font-weight:800}.jh-clean .jh-hero h1 em{font:inherit;color:#fff}.jh-clean .jh-hero p{font-size:13px;line-height:1.45}.jh-clean .jh-mission{padding:30px 0}.jh-clean .jh-mission h2{font-size:30px}.jh-clean .jh-pillars{grid-template-columns:1fr}.jh-clean .jh-pillars article{text-align:left;padding:15px 0 15px 62px;position:relative;border-left:0}.jh-clean .jh-pillars article:before{content:"";position:absolute;left:0;top:13px;width:42px;height:42px;border:2px solid #173b4d;border-radius:50%}.jh-clean .jh-pillars h3{margin:0 0 3px}.jh-clean .jh-pillars p{margin:0}.jh-clean .jh-steps{padding:28px 0}.jh-clean .jh-steps h2{font:700 11px Archivo;text-transform:uppercase;letter-spacing:.18em;color:#5fb6ce;margin-bottom:16px}.jh-clean .jh-stepgrid article{padding:16px 16px 16px 56px;position:relative}.jh-clean .jh-stepgrid span{position:absolute;left:16px;top:16px;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:#0aa0c8;color:white}.jh-clean .jh-stepgrid h3{margin:0 0 5px}.jh-clean .jh-stepgrid p{margin:0;font-size:11px}.jh-clean .jh-walk-photo{order:2;min-height:260px}.jh-clean .jh-walk-copy{order:1;background:#f2ede2;color:#102637}.jh-clean .jh-walk-copy>p,.jh-clean .jh-phases p{color:#43525b}.jh-clean .jh-roof img{height:250px}.jh-clean .jh-person-grid article{grid-template-columns:105px 1fr;gap:15px}.jh-clean .jh-person-grid img{width:105px;height:145px}.jh-clean .jh-person-grid h2{font-size:25px}.jh-clean .jh-person-grid p{font-size:12px}.jh-clean .jh-restore{padding:35px 0}.jh-clean .jh-emergency>img{min-height:170px;height:auto}.jh-clean .jh-join{padding:38px 0}
 }
+
+/* 2026-09-19 editorial, readability, and action-system pass */
+html{font-size:100%}body{font-size:16px;line-height:1.65}
+p,li,dd,.lede{font-size:1rem;line-height:1.7}
+h1,h2,h3,h4{text-wrap:balance}.display{line-height:.98;letter-spacing:-.035em}
+a{font-weight:600;text-underline-offset:.18em}
+.metal-light,.band--wash,.jh-mission,.jh-people{color:#132b3a}
+.metal-light p,.metal-light li,.metal-light label,.band--wash p,.band--wash li,.jh-mission p,.jh-people p{color:#314753!important}
+.metal,.band--ink,.jh-clean,.jh-steps,.jh-roof,.jh-stories,.jh-join{color:#f7fafb}
+.metal p,.metal li,.band--ink p,.band--ink li,.jh-steps p,.jh-roof p,.jh-stories p,.jh-join p{color:#d8e4e8}
+.btn,.jh-primary,.jh-outline,.jh-dark,.foot-btn{
+  min-width:190px;min-height:48px;padding:.8rem 1.15rem!important;display:inline-flex!important;
+  align-items:center;justify-content:center;text-align:center;font:800 .78rem/1.15 Archivo,Inter,sans-serif!important;
+  letter-spacing:.045em;text-transform:uppercase;border-radius:2px;box-sizing:border-box
+}
+.btn-primary,.btn--teal,.jh-primary,.foot-btn-primary{background:#d7aa4b!important;color:#10202b!important;border:1px solid #e5c87d!important}
+.btn-ghost,.jh-outline,.jh-dark,.foot-btn-ghost{background:#0b3141!important;color:#fff!important;border:1px solid #91b6c4!important}
+.btn:hover,.jh-primary:hover,.jh-outline:hover,.jh-dark:hover,.foot-btn:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.jh-emergency-image{position:relative}
+.jh-emergency-hotspots{position:absolute;left:4.6%;right:4.6%;bottom:7.1%;height:22%;display:grid;grid-template-columns:repeat(4,1fr);gap:.9%;z-index:2}
+.jh-emergency-hotspots a{display:block;border:2px solid transparent;border-radius:2px;font-size:0;color:transparent}
+.jh-emergency-hotspots a:focus-visible{outline:4px solid #fff;outline-offset:3px;background:rgba(255,255,255,.12)}
+footer .foot-seal,.jh-footer .jh-footer-brand img{background:transparent!important;border-radius:50%;object-fit:contain;box-shadow:none!important}
+.hire-block{padding:44px 0 72px!important}.hire-media{width:min(1240px,calc(100% - 48px));margin:0 auto 42px;border-radius:2px;max-height:none!important}
+.hire-media img{width:100%;height:auto!important;max-height:640px!important;object-fit:contain!important;object-position:center!important;background:#0a1d28}
+.hire-content{width:min(1180px,calc(100% - 48px));margin-inline:auto}
+.give-hero{padding:88px 0;background:linear-gradient(105deg,rgba(4,18,27,.97),rgba(8,48,65,.88)),url('josephs-home-exterior.jpg') center/cover}
+.give-hero .lede{max-width:720px}.give-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.give-card{background:#fff;color:#173141;padding:30px;border-top:5px solid #d7aa4b;display:flex;flex-direction:column}.give-card p,.give-card li{color:#40535d!important}.give-card .btn{margin-top:auto}.give-amount{font:700 2rem/1 'Source Serif 4',Georgia,serif;color:#123f55}.give-merch img{width:100%;aspect-ratio:1;object-fit:cover;display:block}.give-merch figcaption{padding:20px;background:#fff;color:#173141}.give-note{font-size:.86rem;color:#64737b!important}
+@media(max-width:800px){.btn,.jh-primary,.jh-outline,.jh-dark,.foot-btn{width:100%;min-width:0}.jh-emergency-hotspots{left:4%;right:4%;bottom:5.5%;height:24%}.hire-media,.hire-content{width:calc(100% - 28px)}.give-grid{grid-template-columns:1fr}.give-hero{padding:58px 0}}
 /* STORIES + FINAL REFERENCE DENSITY */
 .jh-stories{background:#071b28}.jh-stories>.jh-wrap{width:100%;max-width:none;display:grid;grid-template-columns:48% 52%;align-items:stretch}.jh-stories-copy{padding:38px max(30px,calc((100vw - 1320px)/2));align-self:center}.jh-stories h2{font:500 38px/1.02 "Source Serif 4",Georgia,serif;margin:0 0 14px}.jh-stories p{color:#c2d0d6;font-size:13px;line-height:1.55;max-width:470px;margin:0 0 22px}.jh-stories img{width:100%;height:255px;object-fit:cover;object-position:center 55%}
 @media(max-width:800px){.jh-stories>.jh-wrap{grid-template-columns:1fr}.jh-stories-copy{padding:30px 24px}.jh-stories h2{font-size:30px}.jh-stories img{height:210px}.jh-clean .jh-golf .jh-wrap{gap:8px}.jh-clean .jh-golf a{white-space:nowrap}.jh-clean .jh-actions>a{flex:1;text-align:center}.jh-clean .jh-hero .jh-actions{display:grid;grid-template-columns:1fr}.jh-clean .jh-emergency-actions a{padding:14px 8px;font-size:10px}}
