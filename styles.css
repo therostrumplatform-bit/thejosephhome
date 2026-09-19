@@ -1509,3 +1509,74 @@ footer .foot-seal,.jh-footer .jh-footer-brand img{background:transparent!importa
     grid-template-columns:1fr;
   }
 }
+
+/* 2026-09-19 homepage refinement: quieter principles, clearer home, brand iconography. */
+.jh-clean .jh-hero{
+  min-height:560px;
+  background-image:linear-gradient(90deg,rgba(4,17,26,.92) 0%,rgba(4,17,26,.74) 31%,rgba(4,17,26,.18) 55%,rgba(4,17,26,.02) 74%),url("josephs-home-exterior.jpg");
+  background-position:68% 47%;
+}
+.jh-clean .jh-hero-copy{max-width:490px}
+.jh-clean .jh-hero h1{font-size:clamp(54px,6.1vw,82px);max-width:7ch;margin-bottom:20px}
+.jh-clean .jh-hero h1 em{color:#d7aa4b}
+.jh-clean .jh-hero-copy>p{max-width:430px}
+.jh-clean .jh-pillars article{position:relative;text-align:left;padding:8px 24px 8px 22px}
+.jh-clean .jh-pillars article:before{display:none!important}
+.jh-clean .jh-pillars article b{display:inline-flex;align-items:center;justify-content:center;width:30px;height:30px;margin-bottom:14px;border:1px solid #2f8199;background:transparent!important;color:#173746!important;font-size:10px;letter-spacing:.06em}
+.jh-clean .jh-pillars article h3{margin:0 0 7px;font-size:14px;line-height:1.25}
+.jh-clean .jh-pillars article p{font-size:12px;line-height:1.55}
+.jh-clean .jh-roof>div>img{min-height:390px;object-position:center 42%}
+.jh-clean .jh-roof-copy{padding-top:44px;padding-bottom:40px}
+.jh-clean .jh-iconrow{border-top:1px solid rgba(95,182,206,.26);border-bottom:1px solid rgba(95,182,206,.26)}
+.jh-clean .jh-iconrow span{min-height:104px;padding:16px 7px;border-right:1px solid rgba(95,182,206,.23)}
+.jh-clean .jh-iconrow span b{width:30px;height:30px;min-height:30px;color:#5fb6ce}
+.jh-clean .jh-iconrow svg{display:block;width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.jh-clean .jh-iconrow small{margin-top:11px;font-size:8px;line-height:1.3;letter-spacing:.02em;color:#f4efe6}
+@media(max-width:800px){
+  .jh-clean .jh-hero{min-height:650px;background-size:auto 340px;background-position:66% top}
+  .jh-clean .jh-hero:before{background:linear-gradient(0deg,#071b28 0%,#071b28 47%,rgba(7,27,40,.5) 68%,rgba(7,27,40,.02) 100%)}
+  .jh-clean .jh-hero>.jh-wrap{padding-top:328px}
+  .jh-clean .jh-hero h1{font-size:46px;max-width:8ch}
+  .jh-clean .jh-pillars{grid-template-columns:1fr 1fr}
+  .jh-clean .jh-pillars article{padding:18px 18px 18px 0;border-left:0;border-bottom:1px solid #d7cdb8}
+  .jh-clean .jh-pillars article:nth-child(even){padding-left:18px;border-left:1px solid #d7cdb8}
+  .jh-clean .jh-pillars article b{position:static;width:27px;height:27px;margin-bottom:10px}
+  .jh-clean .jh-roof>div>img{height:310px;min-height:310px;object-position:center 38%}
+  .jh-clean .jh-iconrow span{min-height:96px}
+}
+@media(max-width:480px){
+  .jh-clean .jh-pillars{grid-template-columns:1fr}
+  .jh-clean .jh-pillars article,.jh-clean .jh-pillars article:nth-child(even){padding:16px 0;border-left:0}
+}
+
+/* Give page: live household needs and uncropped branded merchandise collection. */
+.give-current-needs{background:#f2efe7!important;color:#173141}
+.give-current-needs .lede{max-width:760px;color:#40535d!important}
+.give-needs-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:32px}
+.give-need-card{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(250px,.92fr);background:#fff;border:1px solid #d7cdb8;min-height:350px;overflow:hidden}
+.give-need-card>img{width:100%;height:100%;min-height:350px;object-fit:cover;object-position:center}
+.give-need-card>div{display:flex;flex-direction:column;align-items:flex-start;padding:30px 28px}
+.give-need-card h3{margin:4px 0 12px;color:#173141;font:500 30px/1.05 "Source Serif 4",Georgia,serif}
+.give-need-card p{color:#40535d!important;font-size:14px;line-height:1.6}
+.give-need-card .kicker{color:#9b6e12!important;font:800 10px Archivo,sans-serif;text-transform:uppercase;letter-spacing:.13em}
+.give-need-card .btn{margin-top:auto}
+.give-current-needs .give-note{margin-top:16px;color:#64737b!important}
+.give-merch-v2{background:#071b28!important}
+.give-merch-v2 .lede{max-width:760px;color:#d8e4e8!important}
+.give-merch-hero{margin:32px 0 0;background:#0c2533;border:1px solid #315363}
+.give-merch-hero>img{display:block;width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;background:#101416}
+.give-merch-hero figcaption{display:grid;grid-template-columns:minmax(220px,.6fr) minmax(0,1.4fr);gap:34px;align-items:start;padding:26px 30px;background:#0c2533;color:#fff;border-top:1px solid #315363}
+.give-merch-hero h3{margin:0;color:#fff;font:500 30px/1.05 "Source Serif 4",Georgia,serif}
+.give-merch-hero p{margin:0;color:#c9d7dd!important;font-size:14px;line-height:1.65}
+.give-merch-v2 .cta-row{margin-top:24px}
+@media(max-width:1000px){
+  .give-needs-grid{grid-template-columns:1fr}
+}
+@media(max-width:700px){
+  .give-need-card{grid-template-columns:1fr}
+  .give-need-card>img{height:auto;min-height:0;aspect-ratio:4/3;object-fit:cover}
+  .give-need-card>div{padding:24px 22px}
+  .give-need-card .btn{margin-top:14px}
+  .give-merch-hero figcaption{grid-template-columns:1fr;gap:12px;padding:22px}
+  .give-merch-hero h3{font-size:26px}
+}
