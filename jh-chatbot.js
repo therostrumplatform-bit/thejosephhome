@@ -294,37 +294,7 @@
     return n;
   }
 
-
-  /* ---------- shared pre-footer: one emergency block on every page ---------- */
-  function standardizePreFooter() {
-    var footer = document.querySelector("footer");
-    if (!footer) return;
-    document.querySelectorAll(".jh-emergency, section.emergency").forEach(function (node) { node.remove(); });
-    var emergency = document.createElement("section");
-    emergency.className = "jh-emergency jh-emergency-global jh-emergency-reference";
-    emergency.setAttribute("aria-labelledby", "global-emergency-title");
-    emergency.innerHTML = '<div class="jh-emergency-inner">' +
-      '<div class="jh-emergency-copy"><div class="jh-eyebrow">Immediate help · 24/7 · You are not alone</div>' +
-      '<h2 id="global-emergency-title">If tonight&rsquo;s<br>the emergency.</h2>' +
-      '<p>If you or someone you know is in immediate danger, needs mental health or substance-use crisis support, or treatment information and referrals, contact:</p></div>' +
-      '<div class="jh-emergency-mark" aria-hidden="true"><div class="jh-emergency-shield"><span>✦</span></div></div>' +
-      '<div class="jh-emergency-hope"><strong>There<br>is hope.</strong><i></i><span>People<br>care<br>help is real</span></div>' +
-      '<div class="jh-emergency-actions">' +
-      '<a class="jh-e911" href="tel:911"><span class="jh-resource-icon" aria-hidden="true">☎</span><span><b>Call 911</b><small>Life-threatening<br>emergencies</small></span><u aria-hidden="true">›</u></a>' +
-      '<a class="jh-e988" href="tel:988"><span class="jh-resource-icon" aria-hidden="true">●</span><span><b>Call or text 988</b><small>Suicide &amp; Crisis<br>Lifeline</small></span><u aria-hidden="true">›</u></a>' +
-      '<a class="jh-esamhsa" href="tel:18006624357"><span class="jh-resource-icon" aria-hidden="true">●●●</span><span><b>SAMHSA</b><small>1-800-662-4357<br>Treatment referrals</small></span><u aria-hidden="true">›</u></a>' +
-      '<a class="jh-efind" href="find-help.html#treatment"><span class="jh-resource-icon" aria-hidden="true">➤</span><span><b>Find treatment</b><small>Locate nearby<br>programs</small></span><u aria-hidden="true">›</u></a>' +
-      '</div></div>';
-    footer.parentNode.insertBefore(emergency, footer);
-    document.querySelectorAll("footer .legal").forEach(function (p) {
-      if (/immediate danger|call 911|call or text 988|SAMHSA/i.test(p.textContent)) {
-        p.innerHTML = 'Joseph&rsquo;s Home is a faith-based sober living home. We are not a rehabilitation facility, detox, or medical provider.';
-      }
-    });
-  }
-
   function init() {
-    standardizePreFooter();
     var style = el("style"); style.textContent = CSS; document.head.appendChild(style);
 
     var launch = el("button", "jhb-launch");
