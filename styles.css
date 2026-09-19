@@ -1423,3 +1423,60 @@ footer.foot .social img{border-radius:0!important;box-shadow:none!important}
 .jh-emergency-reference .jh-resource-icon{width:58px;height:58px;border:2px solid #fff;border-radius:50%;display:grid;place-items:center;font:700 22px/1 Archivo,sans-serif;letter-spacing:-.14em}.jh-emergency-reference .jh-emergency-actions b{display:block;font:800 16px Archivo,sans-serif;text-transform:uppercase}.jh-emergency-reference .jh-emergency-actions small{display:block;margin-top:8px;font:600 10px/1.55 Inter,sans-serif;text-transform:uppercase;letter-spacing:.04em;color:#e5eef2}.jh-emergency-reference .jh-e988 small{color:#6fd7ff}.jh-emergency-reference .jh-emergency-actions u{text-decoration:none;font:300 38px/1 Georgia,serif}
 @media(max-width:900px){.jh-emergency-reference{min-height:auto!important;background-position:center top!important}.jh-emergency-reference:before{background:linear-gradient(0deg,rgba(2,9,16,.99) 0%,rgba(2,9,16,.93) 74%,rgba(2,9,16,.5) 100%)}.jh-emergency-reference .jh-emergency-inner{width:calc(100% - 32px);padding:54px 0 30px;grid-template-columns:1fr 120px;grid-template-areas:"copy copy" "mark hope" "actions actions";gap:28px 18px}.jh-emergency-reference .jh-emergency-copy h2{font-size:52px!important}.jh-emergency-reference .jh-emergency-copy p{font-size:12px}.jh-emergency-reference .jh-emergency-mark{min-height:145px}.jh-emergency-reference .jh-emergency-shield{width:112px;height:132px;font-size:40px}.jh-emergency-reference .jh-emergency-hope strong{font-size:25px!important}.jh-emergency-reference .jh-emergency-hope i{width:70px;margin:12px 0}.jh-emergency-reference .jh-emergency-hope span{font-size:9px!important}.jh-emergency-reference .jh-emergency-actions{grid-template-columns:1fr 1fr!important}.jh-emergency-reference .jh-emergency-actions a{min-height:96px!important;grid-template-columns:44px 1fr 12px!important;padding:14px 12px!important;gap:10px}.jh-emergency-reference .jh-resource-icon{width:40px;height:40px;font-size:15px}.jh-emergency-reference .jh-emergency-actions b{font-size:12px}.jh-emergency-reference .jh-emergency-actions small{font-size:8px}.jh-emergency-reference .jh-emergency-actions u{font-size:28px}}
 @media(max-width:520px){.jh-emergency-reference .jh-emergency-inner{grid-template-columns:96px 1fr}.jh-emergency-reference .jh-emergency-copy h2{font-size:44px!important}.jh-emergency-reference .jh-emergency-actions{grid-template-columns:1fr!important}.jh-emergency-reference .jh-emergency-actions a{min-height:84px!important}.jh-emergency-reference .jh-eyebrow{font-size:9px}}
+
+/* 2026-09-19: client-supplied emergency artwork, unchanged and identical on every page. */
+.jh-emergency-image{
+  width:100%;
+  margin:0;
+  padding:0;
+  background:#030b13;
+  line-height:0;
+  overflow:hidden;
+}
+.jh-emergency-image img{
+  display:block;
+  width:100%;
+  height:auto;
+  margin:0;
+}
+
+/* Keep the three paired homepage bands mathematically even. */
+.jh-clean .jh-roof .jh-wrap,
+.jh-clean .jh-person-grid,
+.jh-clean .jh-stories>.jh-wrap{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+}
+
+/* Joey and Jeff remain equal-height without clipping Joey's final line or button. */
+@media(min-width:801px){
+  .jh-clean .jh-person-grid article{
+    grid-template-columns:1fr 1fr;
+    min-height:380px;
+    height:auto;
+  }
+  .jh-clean .jh-person-grid article>img{
+    height:100%;
+    min-height:380px;
+  }
+  .jh-clean .jh-person-grid article>div{
+    min-height:380px;
+    height:auto;
+    padding:32px 30px 36px;
+    overflow:visible;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .jh-clean .jh-person-grid article>div>.jh-primary,
+  .jh-clean .jh-person-grid article>div>.jh-actions{
+    margin-top:auto;
+  }
+}
+
+@media(max-width:800px){
+  .jh-clean .jh-roof .jh-wrap,
+  .jh-clean .jh-person-grid,
+  .jh-clean .jh-stories>.jh-wrap{
+    grid-template-columns:1fr;
+  }
+}
