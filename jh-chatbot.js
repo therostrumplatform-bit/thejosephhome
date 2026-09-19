@@ -294,7 +294,35 @@
     return n;
   }
 
+
+  /* ---------- shared pre-footer: one emergency block on every page ---------- */
+  function standardizePreFooter() {
+    var footer = document.querySelector("footer");
+    if (!footer) return;
+    document.querySelectorAll(".jh-emergency, section.emergency").forEach(function (node) { node.remove(); });
+    var emergency = document.createElement("section");
+    emergency.className = "jh-emergency jh-emergency-global";
+    emergency.setAttribute("aria-labelledby", "global-emergency-title");
+    emergency.innerHTML = '<div class="jh-emergency-inner">' +
+      '<div class="jh-emergency-copy"><div class="jh-eyebrow">Immediate help · 24/7 · You are not alone</div>' +
+      '<h2 id="global-emergency-title">If tonight\'s<br>the emergency.</h2>' +
+      '<p>If you or someone you know is in immediate danger, needs mental health or substance-use crisis support, or treatment information and referrals, contact:</p></div>' +
+      '<div class="jh-emergency-actions">' +
+      '<a class="jh-e911" href="tel:911"><b>Call 911</b><small>Life-threatening emergencies</small></a>' +
+      '<a class="jh-e988" href="tel:988"><b>Call / Text 988</b><small>Suicide &amp; Crisis Lifeline</small></a>' +
+      '<a href="tel:18006624357"><b>SAMHSA<br>1-800-662-4357</b><small>Treatment referrals</small></a>' +
+      '<a href="find-help.html"><b>Find treatment</b><small>Locate nearby programs</small></a></div>' +
+      '<div class="jh-emergency-hope"><strong>There is hope.</strong><span>People care.<br>Help is real.</span></div></div>';
+    footer.parentNode.insertBefore(emergency, footer);
+    document.querySelectorAll("footer .legal").forEach(function (p) {
+      if (/immediate danger|call 911|call or text 988|SAMHSA/i.test(p.textContent)) {
+        p.innerHTML = 'Joseph&rsquo;s Home is a faith-based sober living home. We are not a rehabilitation facility, detox, or medical provider.';
+      }
+    });
+  }
+
   function init() {
+    standardizePreFooter();
     var style = el("style"); style.textContent = CSS; document.head.appendChild(style);
 
     var launch = el("button", "jhb-launch");
