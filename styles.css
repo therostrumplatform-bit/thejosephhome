@@ -1787,3 +1787,80 @@ footer .foot-seal,.jh-footer .jh-footer-brand img{background:transparent!importa
   .jh-clean .jh-footer>.jh-wrap{grid-template-columns:1fr}
   .jh-clean .jh-footer p{text-align:left}
 }
+
+/* 2026-09-21 screenshot QA: one footer and explicit surface contrast. */
+.site-footer{
+  margin:0;
+  padding:42px 24px 34px;
+  background:#d5edf9;
+  color:#173141;
+  text-align:center;
+  border-top:5px solid #2f8199;
+}
+.site-footer-inner{width:min(760px,100%);margin:auto}
+.site-footer-logo{
+  display:block;
+  width:min(420px,82vw);
+  height:auto;
+  margin:0 auto 24px;
+  mix-blend-mode:multiply;
+}
+.site-footer-actions,.site-footer-social{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.site-footer-actions a{
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:11px 20px;
+  background:#173141;
+  color:#fff;
+  font:800 11px Archivo,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  text-decoration:none;
+}
+.site-footer-social{margin:18px 0}
+.site-footer-social a{
+  color:#173141;
+  font:700 12px Archivo,sans-serif;
+  text-decoration:underline;
+  text-underline-offset:4px;
+}
+.site-footer p{margin:0;color:#405b69;font-size:11px;line-height:1.6}
+
+.metal-light .callout,.band--light .callout,.band--wash .callout{
+  background:#e2e8e7!important;
+  color:#263f4d!important;
+  border-color:#b8c7c9!important;
+  border-left-color:#2f8199!important;
+}
+.metal-light .callout p,.metal-light .callout b,
+.band--light .callout p,.band--light .callout b,
+.band--wash .callout p,.band--wash .callout b{
+  color:#263f4d!important;
+}
+.metal-light .inquiry-form .sub{color:#334b59!important}
+
+.story-grid-section{
+  background:#f4efe6!important;
+  color:#173141!important;
+}
+.story-grid-section .eyebrow{color:#8a641a!important}
+.story-card-grid h2,.story-card-grid p{color:#173141!important}
+
+main>.wrap>article>h1,
+main>.wrap>article>h2{color:#f7fafb!important}
+main>.wrap>article>.dek{color:#d8e4e8!important}
+main>.wrap>article>.verse p{color:#173141!important}
+main>.wrap>article>.verse cite{color:#1b6379!important}
+
+@media(max-width:600px){
+  .site-footer{padding:32px 18px 28px}
+  .site-footer-actions{display:grid;grid-template-columns:1fr}
+  .site-footer-actions a{width:100%}
+}
