@@ -1929,14 +1929,14 @@ main>.wrap>article>.verse cite{color:#1b6379!important}
 .jh-clean .jh-hero-copy>p{max-width:560px;color:#eef4f6}
 .jh-clean .jh-hero-photo{display:none!important}
 @media(max-width:1100px){
-  .jh-clean .jh-hero{min-height:720px;align-items:flex-end;background:linear-gradient(0deg,#071b28 0%,#071b28 38%,rgba(7,27,40,.94) 48%,rgba(7,27,40,.42) 68%,rgba(7,27,40,0) 88%),url("josephs-home-hero-merged-v2.jpg") center top/100% auto no-repeat,#071b28!important}
+  .jh-clean .jh-hero{min-height:650px;align-items:flex-end;background:linear-gradient(0deg,#071b28 0%,rgba(7,27,40,.98) 34%,rgba(7,27,40,.82) 50%,rgba(7,27,40,.28) 72%,rgba(7,27,40,0) 100%),url("josephs-home-hero-merged-v2.jpg") 63% center/cover no-repeat!important}
   .jh-clean .jh-hero>.jh-wrap{width:min(760px,calc(100% - 48px))}
-  .jh-clean .jh-hero-copy{max-width:640px;padding:300px 0 48px}
-  .jh-clean .jh-hero h1{max-width:10ch;font-size:clamp(52px,8vw,76px)}
+  .jh-clean .jh-hero-copy{max-width:680px;padding:245px 0 40px}
+  .jh-clean .jh-hero h1{max-width:11ch;font-size:clamp(48px,6vw,64px);line-height:.92}
 }
 @media(max-width:600px){
-  .jh-clean .jh-hero{min-height:700px;background-position:61% center!important}
+  .jh-clean .jh-hero{min-height:620px;background-position:65% center!important}
   .jh-clean .jh-hero>.jh-wrap{width:calc(100% - 36px)}
-  .jh-clean .jh-hero-copy{padding:260px 0 34px}
-  .jh-clean .jh-hero h1{font-size:clamp(43px,13vw,58px)}
+  .jh-clean .jh-hero-copy{padding:220px 0 30px}
+  .jh-clean .jh-hero h1{max-width:11ch;font-size:clamp(42px,11vw,54px)}
 }
