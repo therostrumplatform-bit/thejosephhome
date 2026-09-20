@@ -1687,3 +1687,50 @@ footer .foot-seal,.jh-footer .jh-footer-brand img{background:transparent!importa
   .jh-clean .jh-hero-photo img{min-height:250px}
   .jh-clean .jh-hero h1{font-size:clamp(42px,12vw,56px)}
 }
+
+/* 2026-09-20: clearer program progression and reliable touch targets. */
+.jh-clean .jh-nav nav{gap:clamp(10px,1.35vw,20px)}
+.jh-clean .jh-nav nav>a,
+.jh-clean .jh-actions>a,
+.main>a,.btn,.menu-toggle{
+  min-height:44px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+}
+.jh-clean .jh-phases{
+  position:relative;
+  margin:22px 0 24px;
+}
+.jh-clean .jh-phases>.jh-phase{
+  position:relative;
+  padding:2px 0 22px 34px;
+  border-left:2px solid #2f8199;
+}
+.jh-clean .jh-phases>.jh-phase:before{
+  content:"";
+  position:absolute;
+  left:-7px;
+  top:3px;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:#d7aa4b;
+  box-shadow:0 0 0 4px #f2ede2;
+}
+.jh-clean .jh-phase-support{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin:2px 0 18px 34px;
+}
+.jh-clean .jh-phase-support article{
+  padding:15px 16px;
+  border:1px solid #cdbf9e;
+  background:rgba(255,255,255,.34);
+}
+@media(max-width:800px){
+  .jh-clean .jh-phase-support{grid-template-columns:1fr;margin-left:24px}
+  .jh-clean .jh-nav nav>a{width:100%;padding:12px 18px}
+  .jh-clean .jh-actions>a{width:100%}
+}
