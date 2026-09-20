@@ -1929,14 +1929,20 @@ main>.wrap>article>.verse cite{color:#1b6379!important}
 .jh-clean .jh-hero-copy>p{max-width:560px;color:#eef4f6}
 .jh-clean .jh-hero-photo{display:none!important}
 @media(max-width:1100px){
-  .jh-clean .jh-hero{min-height:650px;align-items:flex-end;background:linear-gradient(0deg,#071b28 0%,rgba(7,27,40,.98) 34%,rgba(7,27,40,.82) 50%,rgba(7,27,40,.28) 72%,rgba(7,27,40,0) 100%),url("josephs-home-hero-merged-v2.jpg") 63% center/cover no-repeat!important}
-  .jh-clean .jh-hero>.jh-wrap{width:min(760px,calc(100% - 48px))}
-  .jh-clean .jh-hero-copy{max-width:680px;padding:245px 0 40px}
-  .jh-clean .jh-hero h1{max-width:11ch;font-size:clamp(48px,6vw,64px);line-height:.92}
+  .jh-clean .jh-hero{min-height:640px;align-items:flex-end;background:linear-gradient(0deg,#071b28 0%,#071b28 39%,rgba(7,27,40,.96) 49%,rgba(7,27,40,.64) 62%,rgba(7,27,40,.16) 77%,rgba(7,27,40,0) 90%),url("josephs-home-hero-merged-v2.jpg") center top/100% auto no-repeat,#071b28!important}
+  .jh-clean .jh-hero>.jh-wrap{width:min(900px,calc(100% - 48px))}
+  .jh-clean .jh-hero-copy{max-width:none;margin:0 auto;padding:255px 0 42px;text-align:center}
+  .jh-clean .jh-hero h1{max-width:none;margin:12px auto 18px;font-size:clamp(48px,6vw,62px);line-height:.92;letter-spacing:-.04em}
+  .jh-clean .jh-hero h1 em{display:block}
+  .jh-clean .jh-hero-copy>p{max-width:760px;margin-left:auto;margin-right:auto}
+  .jh-clean .jh-actions{justify-content:center}
+  .jh-clean .jh-hero-verse{width:max-content;max-width:100%;margin-left:auto;margin-right:auto;text-align:left}
 }
 @media(max-width:600px){
-  .jh-clean .jh-hero{min-height:620px;background-position:65% center!important}
+  .jh-clean .jh-hero{min-height:590px;background:linear-gradient(0deg,#071b28 0%,#071b28 45%,rgba(7,27,40,.94) 57%,rgba(7,27,40,.42) 74%,rgba(7,27,40,0) 94%),url("josephs-home-hero-merged-v2.jpg") 62% top/auto 270px no-repeat,#071b28!important}
   .jh-clean .jh-hero>.jh-wrap{width:calc(100% - 36px)}
-  .jh-clean .jh-hero-copy{padding:220px 0 30px}
-  .jh-clean .jh-hero h1{max-width:11ch;font-size:clamp(42px,11vw,54px)}
+  .jh-clean .jh-hero-copy{padding:205px 0 30px}
+  .jh-clean .jh-hero h1{font-size:clamp(40px,10.5vw,50px)}
+  .jh-clean .jh-actions{display:grid;grid-template-columns:1fr;max-width:330px;margin-left:auto;margin-right:auto}
+  .jh-clean .jh-hero-verse{width:auto;text-align:center;border-left:0;border-top:2px solid #2f8199;padding:12px 0 0}
 }
