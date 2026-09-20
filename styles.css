@@ -914,6 +914,61 @@ article .wrap,.article .wrap{max-width:960px}.cards,.give-tiers,.kit-grid,.produ
   .wrap{width:min(100% - 28px,1240px)}header.site .wrap{min-height:70px}.brand img{width:48px;height:48px}.brand-name{font-size:1rem}.brand-place{font-size:.58rem}.home-hero .hero-grid>div:first-child{padding-top:230px}.stats .wrap{display:grid;grid-template-columns:1fr}.stat{padding:14px 0;border-right:0;border-bottom:1px solid rgba(95,182,206,.15)}.golf-title{font-size:.72rem}.golf .btn{font-size:.6rem}.section-head{font-size:2rem}.emergency .wrap{padding:24px 20px}.emergency h2{font-size:2.2rem}
 }
 
+/* 2026-09-20: continuous homepage hero — real house, subtle navy fade. */
+.jh-clean .jh-hero{
+  position:relative;
+  min-height:clamp(580px,62vw,760px);
+  display:flex;
+  align-items:center;
+  padding:0;
+  overflow:hidden;
+  background:
+    linear-gradient(90deg,#071b28 0%,rgba(7,27,40,.99) 26%,rgba(7,27,40,.92) 39%,rgba(7,27,40,.62) 52%,rgba(7,27,40,.18) 68%,rgba(7,27,40,0) 82%),
+    url("josephs-home-exterior-daylight-cropped.png") center center/cover no-repeat!important;
+}
+.jh-clean .jh-hero>.jh-wrap{
+  display:block;
+  width:min(1280px,calc(100% - 64px));
+  padding:0;
+}
+.jh-clean .jh-hero-copy{
+  position:relative;
+  z-index:2;
+  max-width:590px;
+  padding:74px 0;
+}
+.jh-clean .jh-hero h1{
+  max-width:9ch;
+  margin:14px 0 22px;
+  color:#fff;
+  font-size:clamp(58px,6vw,88px);
+  line-height:.91;
+  letter-spacing:-.045em;
+  text-transform:uppercase;
+}
+.jh-clean .jh-hero h1 em{color:#d7aa4b;font-style:normal}
+.jh-clean .jh-hero-copy>p{max-width:560px;color:#eef4f6}
+.jh-clean .jh-hero-photo{display:none!important}
+
+@media(max-width:1100px){
+  .jh-clean .jh-hero{
+    min-height:720px;
+    align-items:flex-end;
+    background:
+      linear-gradient(0deg,#071b28 0%,rgba(7,27,40,.99) 43%,rgba(7,27,40,.72) 58%,rgba(7,27,40,.24) 75%,rgba(7,27,40,.03) 100%),
+      url("josephs-home-exterior-daylight-cropped.png") 58% center/cover no-repeat!important;
+  }
+  .jh-clean .jh-hero>.jh-wrap{width:min(760px,calc(100% - 48px))}
+  .jh-clean .jh-hero-copy{max-width:640px;padding:300px 0 48px}
+  .jh-clean .jh-hero h1{max-width:10ch;font-size:clamp(52px,8vw,76px)}
+}
+@media(max-width:600px){
+  .jh-clean .jh-hero{min-height:700px;background-position:61% center!important}
+  .jh-clean .jh-hero>.jh-wrap{width:calc(100% - 36px)}
+  .jh-clean .jh-hero-copy{padding:260px 0 34px}
+  .jh-clean .jh-hero h1{font-size:clamp(43px,13vw,58px)}
+}
+
 /* Mockup #2 — locked home refinements */
 .three-year-visual .timeline{display:grid;gap:0;margin:26px 0 30px}
 .three-year-visual .phase{padding:16px 0;border-top:1px solid rgba(16,43,58,.18)}
@@ -1863,4 +1918,25 @@ main>.wrap>article>.verse cite{color:#1b6379!important}
   .site-footer{padding:32px 18px 28px}
   .site-footer-actions{display:grid;grid-template-columns:1fr}
   .site-footer-actions a{width:100%}
+}
+
+/* Keep the merged hero authoritative over all legacy responsive rules. */
+.jh-clean .jh-hero{position:relative;min-height:clamp(580px,62vw,760px);display:flex;align-items:center;padding:0;overflow:hidden;background:linear-gradient(90deg,#071b28 0%,rgba(7,27,40,.99) 26%,rgba(7,27,40,.92) 39%,rgba(7,27,40,.62) 52%,rgba(7,27,40,.18) 68%,rgba(7,27,40,0) 82%),url("josephs-home-exterior-daylight-cropped.png") center center/cover no-repeat!important}
+.jh-clean .jh-hero>.jh-wrap{display:block;width:min(1280px,calc(100% - 64px));padding:0}
+.jh-clean .jh-hero-copy{position:relative;z-index:2;max-width:590px;padding:74px 0}
+.jh-clean .jh-hero h1{max-width:9ch;margin:14px 0 22px;color:#fff;font-size:clamp(58px,6vw,88px);line-height:.91;letter-spacing:-.045em;text-transform:uppercase}
+.jh-clean .jh-hero h1 em{color:#d7aa4b;font-style:normal}
+.jh-clean .jh-hero-copy>p{max-width:560px;color:#eef4f6}
+.jh-clean .jh-hero-photo{display:none!important}
+@media(max-width:1100px){
+  .jh-clean .jh-hero{min-height:720px;align-items:flex-end;background:linear-gradient(0deg,#071b28 0%,rgba(7,27,40,.99) 43%,rgba(7,27,40,.72) 58%,rgba(7,27,40,.24) 75%,rgba(7,27,40,.03) 100%),url("josephs-home-exterior-daylight-cropped.png") 58% center/cover no-repeat!important}
+  .jh-clean .jh-hero>.jh-wrap{width:min(760px,calc(100% - 48px))}
+  .jh-clean .jh-hero-copy{max-width:640px;padding:300px 0 48px}
+  .jh-clean .jh-hero h1{max-width:10ch;font-size:clamp(52px,8vw,76px)}
+}
+@media(max-width:600px){
+  .jh-clean .jh-hero{min-height:700px;background-position:61% center!important}
+  .jh-clean .jh-hero>.jh-wrap{width:calc(100% - 36px)}
+  .jh-clean .jh-hero-copy{padding:260px 0 34px}
+  .jh-clean .jh-hero h1{font-size:clamp(43px,13vw,58px)}
 }
