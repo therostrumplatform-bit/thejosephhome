@@ -215,6 +215,11 @@
     '<b>giving</b>, <b>volunteering</b>, <b>hiring our crews</b>, or <b>Celebrate Recovery</b>.</p>' +
     '<p>For anything else, call <a href="' + TEL + '">' + PHONE + '</a> — a real person answers.</p>';
 
+  /* Conversation context stays in this browser tab only. It is sent with an
+     unmatched question so the backend can answer coherently, but neither the
+     browser nor the backend stores a transcript. */
+  var history = [];
+
   /* ---------- matching ---------- */
   function normalize(s) {
     return (" " + s.toLowerCase().replace(/[^a-z0-9\s']/g, " ").replace(/\s+/g, " ") + " ");
@@ -268,6 +273,10 @@
     '.jhb-msg p{margin:0 0 8px}.jhb-msg p:last-child{margin:0}',
     '.jhb-msg ul{margin:6px 0 8px;padding-left:18px}.jhb-msg li{margin-bottom:4px}',
     '.jhb-msg a{color:#9FE0F1;font-weight:600}',
+    '.jhb-typing{display:flex;align-items:center;gap:5px;min-width:58px}',
+    '.jhb-typing span{width:7px;height:7px;border-radius:50%;background:#9FE0F1;opacity:.45;animation:jhb-pulse 1s infinite}',
+    '.jhb-typing span:nth-child(2){animation-delay:.15s}.jhb-typing span:nth-child(3){animation-delay:.3s}',
+    '@keyframes jhb-pulse{0%,60%,100%{transform:translateY(0);opacity:.35}30%{transform:translateY(-4px);opacity:1}}',
     '.jhb-alert{border-color:rgba(255,180,185,.5);background:linear-gradient(160deg,rgba(142,17,25,.55),rgba(63,169,245,.18))}',
     '.jhb-chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 12px}',
     '.jhb-chip{font:600 13px/1 Inter,sans-serif;color:#D4EDF8;background:rgba(212,237,248,.1);',
@@ -310,7 +319,7 @@
     panel.setAttribute("aria-label", "Joseph's Home help chat");
 
     panel.appendChild(el("div", "jhb-head",
-      '<img src="logo-seal-white.png" alt="">' +
+      '<img src="logo-seal-footer-transparent.png" alt="">' +
       '<span><b>Joseph&rsquo;s Home</b><span>Automated helper &middot; not a person</span></span>' +
       '<button class="jhb-x" type="button" aria-label="Close chat">&times;</button>'));
 
@@ -355,19 +364,81 @@
       });
     }
 
+    function localAnswer(text) {
+      var hit = match(text);
+      if (hit) { say(hit.a, "bot"); setChips(hit.chips || OPENING_CHIPS); }
+      else { say(FALLBACK, "bot"); setChips(OPENING_CHIPS); }
+    }
+
     function ask(text, label) {
       say(label || text, "me");
       setChips([]);
-      window.setTimeout(function () {
-        if (isCrisis(text)) {
-          say(CRISIS_REPLY, "bot", true);
-          setChips(CRISIS_CHIPS);
+
+      /* Crisis help never waits for or sends data to the backend. */
+      if (isCrisis(text)) {
+        say(CRISIS_REPLY, "bot", true);
+        setChips(CRISIS_CHIPS);
+        return;
+      }
+
+      /* Human-written answers remain authoritative and instant. */
+      var hit = match(text);
+      if (hit) {
+        window.setTimeout(function () {
+          say(hit.a, "bot");
+          setChips(hit.chips || OPENING_CHIPS);
+          history.push({ role: "user", content: text });
+          history.push({ role: "assistant", content: hit.a.replace(/<[^>]+>/g, " ") });
+          if (history.length > 8) history = history.slice(-8);
+        }, 220);
+        return;
+      }
+
+      var typing = el("div", "jhb-msg jhb-bot jhb-typing", "<span></span><span></span><span></span>");
+      log.appendChild(typing);
+      log.scrollTop = log.scrollHeight;
+
+      var done = false;
+      var timer = window.setTimeout(function () {
+        if (done) return;
+        done = true;
+        if (typing.parentNode) typing.parentNode.removeChild(typing);
+        localAnswer(text);
+      }, 9000);
+
+      fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: text, history: history })
+      }).then(function (r) {
+        if (!r.ok) throw new Error("Chat unavailable");
+        return r.json();
+      }).then(function (d) {
+        if (done) return;
+        done = true;
+        window.clearTimeout(timer);
+        if (typing.parentNode) typing.parentNode.removeChild(typing);
+        if (d && d.source === "crisis" && d.reply) {
+          say(d.reply, "bot", true);
+          setChips(d.chips || CRISIS_CHIPS);
           return;
         }
-        var hit = match(text);
-        if (hit) { say(hit.a, "bot"); setChips(hit.chips || OPENING_CHIPS); }
-        else { say(FALLBACK, "bot"); setChips(OPENING_CHIPS); }
-      }, 260);
+        if (d && d.reply) {
+          say(d.reply, "bot");
+          setChips(OPENING_CHIPS);
+          history.push({ role: "user", content: text });
+          history.push({ role: "assistant", content: d.reply.replace(/<[^>]+>/g, " ") });
+          if (history.length > 8) history = history.slice(-8);
+          return;
+        }
+        localAnswer(text);
+      }).catch(function () {
+        if (done) return;
+        done = true;
+        window.clearTimeout(timer);
+        if (typing.parentNode) typing.parentNode.removeChild(typing);
+        localAnswer(text);
+      });
     }
 
     form.addEventListener("submit", function (e) {

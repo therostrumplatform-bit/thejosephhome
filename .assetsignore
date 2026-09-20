@@ -1,0 +1,12 @@
+/node_modules/**
+/src/**
+/scripts/**
+/.git/**
+/.github/**
+/.gitignore
+/.assetsignore
+/package.json
+/package-lock.json
+/wrangler.jsonc
+/CHAT-BACKEND.md
+/README.md

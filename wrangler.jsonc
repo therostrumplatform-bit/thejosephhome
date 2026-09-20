@@ -1,8 +1,14 @@
 {
   "name": "josephshome",
+  "main": "src/index.js",
   "compatibility_date": "2026-09-01",
   "assets": {
     "directory": ".",
+    "binding": "ASSETS",
     "not_found_handling": "404-page"
-  }
+  },
+  "vars": {
+    "CHAT_MODEL": "claude-haiku-4-5-20251001"
+  },
+  "observability": { "enabled": true }
 }

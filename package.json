@@ -1,0 +1,14 @@
+{
+  "name": "thejosephhome",
+  "private": true,
+  "type": "module",
+  "description": "Joseph's Home website and privacy-first help chat.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "node scripts/predeploy.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
