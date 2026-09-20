@@ -1611,7 +1611,8 @@ footer .foot-seal,.jh-footer .jh-footer-brand img{background:transparent!importa
 .jh-clean .jh-hero-photo{
   position:relative;
   min-height:590px;
-  margin:0;
+  margin:0 0 0 -110px;
+  width:calc(100% + 110px);
   overflow:hidden;
   background:#102735;
 }
@@ -1619,9 +1620,9 @@ footer .foot-seal,.jh-footer .jh-footer-brand img{background:transparent!importa
   content:"";
   position:absolute;
   inset:0 auto 0 0;
-  width:9%;
+  width:34%;
   z-index:1;
-  background:linear-gradient(90deg,#071b28,rgba(7,27,40,0));
+  background:linear-gradient(90deg,#071b28 0%,rgba(7,27,40,.96) 18%,rgba(7,27,40,.72) 45%,rgba(7,27,40,.3) 72%,rgba(7,27,40,0) 100%);
   pointer-events:none;
 }
 .jh-clean .jh-hero-photo img{
@@ -1666,7 +1667,7 @@ footer .foot-seal,.jh-footer .jh-footer-brand img{background:transparent!importa
 
 @media(max-width:800px){
   .jh-clean .jh-hero>.jh-wrap{grid-template-columns:1fr}
-  .jh-clean .jh-hero-photo{order:1;min-height:0}
+  .jh-clean .jh-hero-photo{order:1;min-height:0;margin:0;width:100%}
   .jh-clean .jh-hero-photo:before{display:none}
   .jh-clean .jh-hero-photo img{height:auto;min-height:0;object-fit:contain}
   .jh-clean .jh-hero-copy{order:2;padding:38px 22px 42px}
