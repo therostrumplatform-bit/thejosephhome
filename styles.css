@@ -914,6 +914,34 @@ article .wrap,.article .wrap{max-width:960px}.cards,.give-tiers,.kit-grid,.produ
   .wrap{width:min(100% - 28px,1240px)}header.site .wrap{min-height:70px}.brand img{width:48px;height:48px}.brand-name{font-size:1rem}.brand-place{font-size:.58rem}.home-hero .hero-grid>div:first-child{padding-top:230px}.stats .wrap{display:grid;grid-template-columns:1fr}.stat{padding:14px 0;border-right:0;border-bottom:1px solid rgba(95,182,206,.15)}.golf-title{font-size:.72rem}.golf .btn{font-size:.6rem}.section-head{font-size:2rem}.emergency .wrap{padding:24px 20px}.emergency h2{font-size:2.2rem}
 }
 
+/* 2026-09-21: unified navy footer with transparent brand and restored icon tiles. */
+.site-footer{
+  padding:46px 24px 38px;
+  background:#071b28!important;
+  color:#f7fafb!important;
+  border-top:5px solid #2f8199;
+}
+.site-footer-inner{width:min(760px,100%)}
+.site-footer-logo{
+  width:min(520px,88vw);
+  margin:0 auto 28px;
+  mix-blend-mode:normal;
+  filter:none;
+}
+.site-footer-actions a{border:1px solid #5ca8ba;background:transparent;color:#fff}
+.site-footer-actions a:first-child{background:#d7aa4b;border-color:#d7aa4b;color:#071b28}
+.site-footer-social{gap:16px;margin:24px 0}
+.site-footer-social a{display:block;width:76px;height:76px;border-radius:10px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+.site-footer-social img{display:block;width:100%;height:100%;object-fit:cover}
+.site-footer p{color:#a9bdc7!important}
+.jh-clean .jh-hero h1 em{color:#fff!important}
+@media(max-width:600px){
+  .site-footer{padding:36px 18px 110px}
+  .site-footer-logo{width:min(470px,94vw)}
+  .site-footer-social{display:flex;gap:12px}
+  .site-footer-social a{width:68px;height:68px}
+}
+
 /* 2026-09-20: continuous homepage hero — real house, subtle navy fade. */
 .jh-clean .jh-hero{
   position:relative;
@@ -1945,4 +1973,22 @@ main>.wrap>article>.verse cite{color:#1b6379!important}
   .jh-clean .jh-hero h1{font-size:clamp(40px,10.5vw,50px)}
   .jh-clean .jh-actions{display:grid;grid-template-columns:1fr;max-width:330px;margin-left:auto;margin-right:auto}
   .jh-clean .jh-hero-verse{width:auto;text-align:center;border-left:0;border-top:2px solid #2f8199;padding:12px 0 0}
+}
+
+/* Authoritative unified footer and single-color hero headline. */
+.site-footer{padding:46px 24px 38px;background:#071b28!important;color:#f7fafb!important;border-top:5px solid #2f8199}
+.site-footer-inner{width:min(760px,100%)}
+.site-footer-logo{width:min(520px,88vw);margin:0 auto 28px;mix-blend-mode:normal;filter:none}
+.site-footer-actions a{border:1px solid #5ca8ba;background:transparent;color:#fff}
+.site-footer-actions a:first-child{background:#d7aa4b;border-color:#d7aa4b;color:#071b28}
+.site-footer-social{gap:16px;margin:24px 0}
+.site-footer-social a{display:block;width:76px;height:76px;border-radius:10px;overflow:hidden;box-shadow:0 8px 22px rgba(0,0,0,.28)}
+.site-footer-social img{display:block;width:100%;height:100%;object-fit:cover}
+.site-footer p{color:#a9bdc7!important}
+.jh-clean .jh-hero h1 em{color:#fff!important}
+@media(max-width:600px){
+  .site-footer{padding:36px 18px 110px}
+  .site-footer-logo{width:min(470px,94vw)}
+  .site-footer-social{display:flex;gap:12px}
+  .site-footer-social a{width:68px;height:68px}
 }
